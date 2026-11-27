@@ -5,162 +5,405 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Tomis Top Estate · Agenție imobiliară · Constanța</title>
+<meta name="description" content="Tomis Top Estate, agenție imobiliară în Constanța, Strada Adam Ion 24A. Vânzări, cumpărări și închirieri. Tel: 0753 822 539.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
-:root{--news:#EDE8DC;--ink:#1B1B1B;--red:#B5271B;--gray:#5a564d}
+:root{--bg:#F7F4EE;--surface:#ECE5D8;--ink:#12232E;--muted:#55626A;--line:#DDD4C4;--accent:#1B5874;--accent-ink:#fff;--display:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--dw:400;--dls:-.01em;--img-r:4px;--h1max:80px;--brand-size:26px;--brand-ls:0;--field:#fff;--hero-pos:center 60%;--rev-bg:#1B5874;--scrim:linear-gradient(to right,rgba(9,20,28,.82) 0%,rgba(9,20,28,.55) 45%,rgba(9,20,28,.1) 80%)}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--news);color:var(--ink);font:400 16px/1.45 "Old Standard TT",Georgia,serif;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.n{font-family:"Archivo Narrow",sans-serif}
-.page{max-width:1240px;margin:0 auto;padding:18px 3vw 40px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-.ear{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:600 12px/1.3 "Archivo Narrow";letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:8px}
-.mast{text-align:left;padding:14px 0 6px;border-bottom:4px double var(--ink);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.mast h1{font:700 clamp(46px,9.5vw,132px)/.85 "Old Standard TT";letter-spacing:-.025em}
-.mast h1 i{font-weight:400;color:var(--red)}
-.mast .box{border:1px solid var(--ink);padding:8px 12px;font:600 13px/1.3 "Archivo Narrow";text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;max-width:220px}
-.mast .box b{display:block;font:700 34px/1 "Old Standard TT";letter-spacing:0}
-.dateline{display:flex;gap:18px;flex-wrap:wrap;font:600 13px/1 "Archivo Narrow";text-transform:uppercase;letter-spacing:.08em;padding:8px 0;border-bottom:1px solid var(--ink)}
-.dateline span+span::before{content:"■";margin-right:18px;color:var(--red);font-size:9px;vertical-align:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-.cols{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr) minmax(0,1fr);gap:0;margin-top:18px}
-.cols>*{padding:0 18px;border-left:1px solid var(--ink)}
-.cols>*:first-child{border-left:0;padding-left:0}
-.cols>*:last-child{padding-right:0}
-.lead h2{font:700 clamp(32px,4vw,54px)/.98 "Old Standard TT";letter-spacing:-.02em;margin-bottom:12px}
-.lead .deck{font:italic 400 21px/1.3 "Old Standard TT";margin-bottom:16px;color:var(--gray)}
-.lead .body{columns:2;column-gap:22px;column-rule:1px solid rgba(0,0,0,.25);text-align:justify;hyphens:auto}
-.lead .body p{margin-bottom:.7em}
-.lead .body p:first-child::first-letter{float:left;font:700 64px/.8 "Old Standard TT";margin:4px 6px 0 0;color:var(--red)}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-.rubric{font:700 13px/1 "Archivo Narrow";letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--news);padding:6px 8px;margin-bottom:10px}
-.ad{border-bottom:1px solid rgba(0,0,0,.35);padding:8px 0 10px;font-size:15px}
-.ad b{font-family:"Archivo Narrow";text-transform:uppercase;letter-spacing:.04em}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
 
-/* composer */
-.compose{margin-top:28px;border:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.compose .f{padding:20px;border-right:2px solid var(--ink)}
-.compose h2{font:700 30px/1 "Old Standard TT";margin-bottom:6px}
-.compose label{display:block;font:600 12px/1 "Archivo Narrow";letter-spacing:.12em;text-transform:uppercase;margin:16px 0 6px}
-.seg{display:flex;flex-wrap:wrap;border:1px solid var(--ink)}
-.seg label{margin:0;flex:1 1 25%;text-align:center;cursor:pointer;border-left:1px solid var(--ink)}
-.seg label:first-child{border-left:0}
-.seg input{position:absolute;opacity:0}
-.seg span{display:block;padding:10px 4px;font:700 13px/1 "Archivo Narrow";letter-spacing:.06em}
-.seg input:checked+span{background:var(--ink);color:var(--news)}
-.seg input:focus-visible+span{outline:2px solid var(--red);outline-offset:-4px}
-.compose input[type=text],.compose textarea{width:100%;font:400 16px/1.4 "Old Standard TT";background:transparent;border:0;border-bottom:1px solid var(--ink);padding:6px 0;color:var(--ink)}
-.compose textarea{resize:vertical;min-height:70px}
-.compose input:focus,.compose textarea:focus{outline:none;border-bottom:2px solid var(--red)}
-.preview{padding:20px;background:#E2DCCD;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
-.clip{background:var(--news);border:1px solid var(--ink);padding:14px 16px;font-size:16px;transform:rotate(-.8deg);box-shadow:3px 3px 0 var(--ink)}
-.clip b{font-family:"Archivo Narrow";text-transform:uppercase}
-.send{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font:700 16px/1 "Archivo Narrow";letter-spacing:.1em;text-transform:uppercase;padding:16px}
-.send:hover,.send:focus-visible{background:var(--ink)}
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
 
-.bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);border-top:4px double var(--ink);margin-top:30px;padding-top:12px;gap:18px;font-size:15px}
-.bottom h3{font:700 13px/1 "Archivo Narrow";letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
-.bottom .tel{font:700 30px/1.1 "Old Standard TT";text-decoration:none}
-.fine{font-size:12px;color:var(--gray);margin-top:24px}
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
 
-@media (max-width:900px){
-  .cols{grid-template-columns:1fr 1fr}
-  .lead{grid-column:1/3;border-left:0;padding:0 0 20px !important;border-bottom:1px solid var(--ink);margin-bottom:18px}
-  .cols>*:nth-child(2){border-left:0;padding-left:0}
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
+
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
+
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
+
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
-@media (max-width:620px){
-  .cols,.compose,.bottom{grid-template-columns:1fr}
-  .lead{grid-column:1}
-  .cols>*{border-left:0;padding:0 0 14px !important}
-  .lead .body{columns:1;text-align:left}
-  .compose .f{border-right:0;border-bottom:2px solid var(--ink)}
-  .seg label{flex-basis:50%}
-  .seg label:nth-child(3){border-left:0}
-  .seg label:nth-child(n+3){border-top:1px solid var(--ink)}
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
 }
+
+.hero-full .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:end}
+@media (max-width:960px){.hero-full .wrap{grid-template-columns:1fr}.hero-full{--scrim:linear-gradient(to top,rgba(9,20,28,.9) 0%,rgba(9,20,28,.6) 55%,rgba(9,20,28,.2) 100%)}}
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="ear"><span>Constanța · Strada Adam Ion 24A</span><span><a href="tel:+40753822539">Tel. 0753 822 539</a></span></div>
-  <header class="mast">
-    <h1>Tomis <i>Top</i> Estate</h1>
-    <div class="box">Nota pe Google Maps<b>5,0</b>din 470 de recenzii</div>
-  </header>
-  <div class="dateline"><span>Agenție imobiliară</span><span>Vânzări</span><span>Cumpărări</span><span>Închirieri</span></div>
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Strada Adam Ion 24A, Constanța</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>5,0 pe Google · 470 de recenzii</span>
+  <a href="tel:+40753822539"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0753 822 539</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>Tomis Top Estate</b><small>Agenție imobiliară · Constanța</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#servicii">Servicii</a><a href="#vanzatori">Pentru vânzători</a><a href="#recenzii">Recenzii</a><a href="#contact">Contact</a><a class="btn btn-dark" href="tel:+40753822539">Sună agenția</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main>
 
-  <main>
-    <div class="cols">
-      <article class="lead">
-        <h2>Anunțul tău, citit de cineva care cunoaște Constanța.</h2>
-        <p class="deck">Portalurile au mii de anunțuri. Aici ai un om care răspunde la telefon.</p>
-        <div class="body">
-          <p>Fie că vinzi apartamentul bunicilor, cauți primul tău cămin sau vrei să închiriezi pe termen lung, totul începe cu o discuție. Spui ce ai sau ce cauți, iar agenția îți spune sincer ce se poate.</p>
-          <p>Tomis Top Estate lucrează din Strada Adam Ion 24A. Cei 470 de oameni care au lăsat o recenzie pe Google au dat, în medie, nota 5,0 — lucru rar pentru o agenție imobiliară.</p>
-          <p>Cel mai simplu mod de a începe e mai jos: scrie-ți anunțul ca în ziar și trimite-l direct pe WhatsApp.</p>
-        </div>
-      </article>
-      <aside>
-        <div class="rubric">Mica publicitate</div>
-        <div class="ad"><b>Vând.</b> Ai o proprietate în Constanța? Spune zona, numărul de camere și când poate fi vizitată.</div>
-        <div class="ad"><b>Cumpăr.</b> Spune bugetul și cartierul. Primești doar ce se potrivește.</div>
-      </aside>
-      <aside>
-        <div class="rubric">Rubrica chirii</div>
-        <div class="ad"><b>Închiriez.</b> Proprietari care vor chiriași serioși, fără zeci de telefoane.</div>
-        <div class="ad"><b>Caut chirie.</b> De la ce dată, pentru câte persoane, ce buget.</div>
-      </aside>
+<section class="hero hero-full">
+  <img src="img/hero.jpg" width="1600" height="2134" alt="Cazinoul din Constanța, pe faleză, lângă mare">
+  <div class="wrap">
+    <div class="inner">
+      <p class="eyebrow">Agenție imobiliară · Constanța</p>
+      <h1>Vinzi, cumperi sau închiriezi în Constanța?</h1>
+      <p class="lead">Tomis Top Estate te ajută de la prima discuție până la semnătură. Nota 5,0 din 470 de recenzii pe Google.</p>
+      <div class="actions"><a class="btn btn-primary" href="tel:+40753822539"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună: 0753 822 539</a></div>
     </div>
+    <form class="request" id="req" data-wa="40753822539" onsubmit="return false" aria-labelledby="req-t">
+  <h3 id="req-t">Spune-ne ce cauți</h3>
+  <p class="small">Mesajul se deschide în WhatsApp, gata de trimis.</p>
+  <div class="seg" role="radiogroup" aria-label="Ce vrei să faci">
+    <label><input type="radio" name="t" value="Vreau să vând" checked><span>Vând</span></label>
+    <label><input type="radio" name="t" value="Vreau să cumpăr"><span>Cumpăr</span></label>
+    <label><input type="radio" name="t" value="Vreau să închiriez o proprietate"><span>Dau în chirie</span></label>
+    <label><input type="radio" name="t" value="Caut o chirie"><span>Caut chirie</span></label>
+  </div>
+  <div class="fields">
+    <label>Tip proprietate<input id="rq-tip" type="text" placeholder="ex. apartament 2 camere" maxlength="60"></label>
+    <label>Zona<input id="rq-zona" type="text" placeholder="cartier sau stradă" maxlength="60"></label>
+    <label class="full">Buget sau preț dorit<input id="rq-buget" type="text" placeholder="opțional" maxlength="40"></label>
+    <label class="full">Detalii<textarea id="rq-msg" placeholder="etaj, suprafață, de când e disponibil…" maxlength="400"></textarea></label>
+  </div>
+  <a class="btn btn-primary" id="req-send" href="https://wa.me/40753822539"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Trimite pe WhatsApp</a>
+</form>
+  </div>
+</section>
 
-    <section class="compose" aria-labelledby="ch">
-      <form class="f" id="f" onsubmit="return false">
-        <h2 id="ch">Scrie-ți anunțul</h2>
-        <p class="n" style="font-size:14px;color:var(--gray)">Nu se publică nicăieri. Se trimite doar agenției, pe WhatsApp.</p>
-        <label id="tl">Tip</label>
-        <div class="seg" role="radiogroup" aria-labelledby="tl">
-          <label><input type="radio" name="t" value="Vând" checked><span>VÂND</span></label>
-          <label><input type="radio" name="t" value="Cumpăr"><span>CUMPĂR</span></label>
-          <label><input type="radio" name="t" value="Închiriez"><span>ÎNCHIRIEZ</span></label>
-          <label><input type="radio" name="t" value="Caut chirie"><span>CAUT CHIRIE</span></label>
-        </div>
-        <label for="p">Ce fel de proprietate</label>
-        <input type="text" id="p" placeholder="apartament 2 camere" maxlength="60">
-        <label for="z">Zona</label>
-        <input type="text" id="z" placeholder="Tomis Nord" maxlength="60">
-        <label for="d">Detalii</label>
-        <textarea id="d" placeholder="etaj, buget, de când…" maxlength="300"></textarea>
-      </form>
-      <div class="preview">
-        <div>
-          <div class="rubric" style="display:inline-block">Așa va arăta</div>
-          <p class="clip" id="out" aria-live="polite"></p>
-        </div>
-        <a class="send" id="send" href="https://wa.me/40753822539">Trimite pe WhatsApp →</a>
-      </div>
-    </section>
+<section class="sec" id="servicii">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Servicii</p><h2>Trei motive pentru care ne sună oamenii</h2></div><p class=lead>Indiferent de ce ai de rezolvat, începi cu o discuție și pleci cu un plan clar.</p></div>
+    <div class="photo-cards">
+      <article><img src="img/living.jpg" width="1400" height="933" loading="lazy" alt="Living luminos cu canapea și ieșire spre balcon"><h3>Vânzare</h3><p>Stabilim împreună un preț realist și te ajutăm să-ți prezinți proprietatea cum merită.</p><a class="link" href="https://wa.me/40753822539">Vreau să vând <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article><img src="img/chei.jpg" width="1200" height="800" loading="lazy" alt="Mână care ține un set de chei"><h3>Cumpărare</h3><p>Spui bugetul și zona, iar noi îți propunem doar ce merită văzut.</p><a class="link" href="https://wa.me/40753822539">Caut o proprietate <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article><img src="img/oras.jpg" width="1800" height="1214" loading="lazy" alt="Vedere peste acoperișurile Constanței spre mare"><h3>Închiriere</h3><p>Pentru proprietari care vor chiriași serioși și pentru cei care caută o locuință.</p><a class="link" href="https://wa.me/40753822539">Întreabă despre chirii <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+    </div>
+  </div>
+</section>
 
-    <section class="bottom">
-      <div><h3>Telefon</h3><a class="tel" href="tel:+40753822539">0753 822 539</a></div>
-      <div><h3>Sediu</h3>Strada Adam Ion 24A<br>900178 Constanța<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Tomis%20Top%20Estate%2C%20Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba">vezi pe hartă</a></div>
-      <div><h3>WhatsApp</h3><a href="https://wa.me/40753822539">wa.me/40753822539</a></div>
-    </section>
-  </main>
-  <p class="fine n">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</p>
-</div>
+<section class="sec alt steps" id=vanzatori><div class="wrap"><p class="eyebrow">Pentru vânzători</p><h2 style="margin:18px 0 clamp(40px,6vh,60px);max-width:18ch">Cum decurge o vânzare</h2><div class="grid"><div class="step"><h3>Discuția</h3><p>Ne spui ce ai sau ce cauți. Primești o părere sinceră despre piață și preț.</p></div><div class="step"><h3>Pregătirea</h3><p>Stabilim pașii: documente, fotografii, vizionări.</p></div><div class="step"><h3>Tranzacția</h3><p>Te însoțim până la semnarea actelor.</p></div></div></div></section>
+
+<div id="recenzii"></div>
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>5,0</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 470 de recenzii<br>pe Google Maps</span></div>
+    <p>470 de oameni au lăsat o recenzie publică pe Google, iar nota medie este 5,0. Rar întâlnești asta la o agenție imobiliară.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Tomis%20Top%20Estate%2C%20Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba">Citește recenziile pe Google</a></div>
+  <img src="img/blocuri.jpg" width="1200" height="1212" loading="lazy" alt="Blocuri de locuințe cu vedere spre mare">
+</div></section>
+
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Răspunsuri scurte</h2></div><div><details open><summary>Cât costă serviciile agenției?</summary><p>Comisionul și condițiile le afli direct de la agenție, la telefon sau pe WhatsApp.</p></details><details><summary>Ce documente trebuie pentru vânzare?</summary><p>Discutăm la telefon în funcție de proprietate și îți spunem exact ce să pregătești.</p></details><details><summary>Lucrați și cu chirii?</summary><p>Da, atât cu proprietari, cât și cu oameni care caută o locuință de închiriat.</p></details><details><summary>Unde e sediul?</summary><p>Pe Strada Adam Ion 24A, în Constanța.</p></details></div></div></section>
+
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Hai să vorbim</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40753822539">0753 822 539</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40753822539">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Strada Adam Ion 24A<br>900178 Constanța</dd></dl>
+    <div class="actions"><a class="btn btn-dark" href="tel:+40753822539"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba">Indicații de drum</a></div>
+  </div>
+  <div class="map"><iframe title="Hartă: Strada Adam Ion 24A, Constanța" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>Tomis Top Estate</b><small>Agenție imobiliară · Constanța</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=Tomis%20Top%20Estate%2C%20Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba">Strada Adam Ion 24A, Constanța</a></div>
+      <div>Contact<a href="tel:+40753822539">0753 822 539</a><a href="https://wa.me/40753822539">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© Tomis Top Estate</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-dark" href="tel:+40753822539"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40753822539"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
 <script>
 (function(){
-  var f=document.getElementById('f'),out=document.getElementById('out'),send=document.getElementById('send');
-  function v(id,def){var x=document.getElementById(id).value.trim();return x||def}
-  function upd(){
-    var t=f.querySelector('input[name=t]:checked').value;
-    var txt=t+' '+v('p','apartament 2 camere')+', zona '+v('z','Tomis Nord')+'. '+v('d','Detalii la telefon.');
-    out.innerHTML='';var b=document.createElement('b');b.textContent=t+'.';out.appendChild(b);
-    out.appendChild(document.createTextNode(' '+txt.slice(t.length+1)));
-    send.href='https://wa.me/40753822539?text='+encodeURIComponent('Bună ziua! Anunț de pe site: '+txt);
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
   }
-  f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
 })();
 </script>
 </body>

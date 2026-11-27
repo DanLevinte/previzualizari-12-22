@@ -5,115 +5,416 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Cabinet stomatologic Dr. Pirvu Roxana · Craiova</title>
+<meta name="description" content="Cabinet stomatologic Dr. Pirvu Roxana, Strada Basarabia 2, Bloc I21, Ap. 3, Craiova. Programări: 0744 593 126.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,300;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#EEF0E6;--desk:#D9D6CB;--ink:#1A1A1A;--blue:#25389A;--red:#B8322A}
+:root{--bg:#F5F6F3;--surface:#E8ECE8;--ink:#1C2530;--muted:#5A6470;--line:#D6DBD6;--accent:#2D5A86;--accent-ink:#fff;--accent-soft:#DCE6F0;--display:'Literata',Georgia,serif;--sans:'Public Sans',system-ui,sans-serif;--dw:400;--dls:-.02em;--img-r:2px;--hero-ar:5/4;--h1max:70px;--brand-size:24px;--brand-ls:0;--rev-bg:#1C2530}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--desk);color:var(--ink);font:400 17px/1.6 "IBM Plex Serif",Georgia,serif;overflow-x:hidden}
-a{color:var(--blue)}
-.type{font-family:"Courier Prime",monospace}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-.sheet{position:relative;max-width:860px;margin:5vh 0 8vh 7vw;background:var(--paper);padding:64px 64px 72px 104px;
-  box-shadow:0 1px 0 #c9c6ba,0 18px 30px -24px rgba(0,0,0,.35);
-  background-image:linear-gradient(90deg,transparent 78px,var(--red) 78px,var(--red) 79px,transparent 79px),
-    repeating-linear-gradient(transparent 0 33px,rgba(37,56,154,.13) 33px 34px);
-  background-position:0 0,0 120px}
-/* perforated top edge */
-.sheet::before{content:"";position:absolute;left:0;right:0;top:-6px;height:12px;
-  background:radial-gradient(circle at 6px 6px,var(--desk) 3.2px,transparent 3.6px) 0 0/14px 12px repeat-x}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-.head{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:14px}
-.head strong{display:block;font-size:15px;letter-spacing:.04em}
-.field{display:flex;gap:10px;align-items:baseline;margin-top:22px;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
-.field i{flex:1;border-bottom:1px dotted var(--ink);font:400 18px "Courier Prime";text-transform:none;letter-spacing:0;color:var(--blue);font-style:normal}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-.rp{font:italic 300 clamp(80px,14vw,150px)/.8 "IBM Plex Serif";margin:46px 0 0 -6px;color:var(--ink)}
-h1{font:400 clamp(30px,4.6vw,52px)/1.08 "Courier Prime";color:var(--blue);margin-top:10px;max-width:16ch;letter-spacing:-.01em}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
 
-.stamp{position:absolute;right:52px;top:150px;width:170px;height:170px;transform:rotate(-14deg);color:var(--blue);opacity:.82;mix-blend-mode:multiply}
-@media (prefers-reduced-motion:no-preference){.stamp{animation:thunk .45s cubic-bezier(.2,.9,.3,1.3) .6s both}}
-@keyframes thunk{from{transform:rotate(-4deg) scale(1.6);opacity:0}to{transform:rotate(-14deg) scale(1);opacity:.82}}
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
 
-ol.rx{list-style:none;margin-top:54px;counter-reset:r}
-ol.rx>li{counter-increment:r;display:grid;grid-template-columns:52px 1fr;gap:4px 10px;padding:18px 0 20px;border-top:1px solid rgba(26,26,26,.25)}
-ol.rx>li::before{content:counter(r) ".";font:700 26px/1.1 "Courier Prime";color:var(--red)}
-.rx h2{font:600 22px/1.25 "IBM Plex Serif";grid-column:2}
-.rx p{grid-column:2;max-width:52ch}
-.rx .note{font-family:"Courier Prime";color:var(--blue);font-size:16px}
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
 
-.call{display:inline-block;margin-top:14px;font:700 clamp(26px,4vw,38px)/1 "Courier Prime";color:var(--ink);text-decoration:none;border-bottom:4px double var(--red);padding-bottom:4px}
-.wa{display:inline-block;margin:16px 0 0 0;font-size:15px}
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
 
-.sign{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-top:56px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
-.sign svg{width:200px;height:60px;display:block;margin-bottom:4px}
-.sign .line{border-top:1px solid var(--ink);padding-top:6px}
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
 
-.margin-note{position:absolute;left:calc(100% + 34px);top:240px;width:190px;font:400 15px/1.45 "Courier Prime";color:#4a4a4a;transform:rotate(1.5deg)}
-.margin-note::before{content:"←";display:block;font-size:22px;color:var(--red)}
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
 
-footer{margin:0 7vw 6vh;font-size:13px;color:#4a4a4a;max-width:70ch}
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
 
-@media (max-width:1200px){.margin-note{position:static;width:auto;margin:30px 0 0;transform:none}.margin-note::before{content:"↑"}}
-@media (max-width:640px){
-  .sheet{margin:24px 10px 40px;padding:44px 20px 48px 46px;background-image:linear-gradient(90deg,transparent 32px,var(--red) 32px,var(--red) 33px,transparent 33px),repeating-linear-gradient(transparent 0 33px,rgba(37,56,154,.13) 33px 34px)}
-  .stamp{width:100px;height:100px;right:22px;top:112px}
-  ol.rx>li{grid-template-columns:34px 1fr}
-  footer{margin:0 16px 40px}
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
+}
+
+
 </style>
 </head>
 <body>
-<main class="sheet">
-  <div class="head">
-    <div><strong>Cabinet stomatologic</strong>Dr. Pirvu Roxana</div>
-    <div>Craiova · Str. Basarabia 2</div>
-  </div>
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Strada Basarabia 2, Craiova</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>5,0 pe Google · 141 de recenzii</span>
+  <a href="tel:+40744593126"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0744 593 126</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>Dr. Pirvu Roxana</b><small>Cabinet stomatologic · Craiova</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#cabinet">Cabinetul</a><a href="#tratamente">Tratamente</a><a href="#cum-ajungi">Cum ajungi</a><a href="#contact">Contact</a><a class="btn btn-dark" href="tel:+40744593126">Programează-te</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main>
 
-  <div class="field">Pacient <i>tu</i></div>
-  <div class="field">Pentru <i>o durere, un control sau o întrebare</i></div>
-
-  <div class="rp" aria-hidden="true">Rp./</div>
-  <h1>Un consult. Fără grabă.</h1>
-
-  <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
-    <defs><path id="c" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0"/></defs>
-    <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="5"/>
-    <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
-    <text font-family="Courier Prime" font-weight="700" font-size="17" fill="currentColor" letter-spacing="2.6"><textPath href="#c">DR. PIRVU ROXANA · MEDIC STOMATOLOG · CRAIOVA ·</textPath></text>
-    <text x="100" y="96" text-anchor="middle" font-family="IBM Plex Serif" font-style="italic" font-size="26" fill="currentColor">5,0</text>
-    <text x="100" y="118" text-anchor="middle" font-family="Courier Prime" font-size="11" fill="currentColor">141 RECENZII</text>
-  </svg>
-
-  <ol class="rx">
-    <li>
-      <h2>Cabinetul e într-un bloc, la apartamentul 3.</h2>
-      <p>Bloc I21, Strada Basarabia 2, Ap. 3, 200049 Craiova. Nu e o clinică cu recepție și săli de așteptare — e un cabinet mic, cu numele doctoriței pe ușă.</p>
-      <p class="note"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cabinet%20stomatologic%20Dr.%20Pirvu%20Roxana%2C%20Bloc%20I21%2C%20Strada%20Basarabia%202%2C%20Ap%203%2C%20200049%20Craiova">→ vezi pe hartă</a></p>
-    </li>
-    <li>
-      <h2>Programarea se face la telefon.</h2>
-      <p>Spune pe scurt ce te deranjează. Primești o oră la care chiar ești așteptat.</p>
-      <a class="call" href="tel:+40744593126">0744 593 126</a><br>
-      <a class="wa" href="https://wa.me/40744593126">sau scrie pe WhatsApp</a>
-    </li>
-    <li>
-      <h2>Ce spun pacienții se vede pe Google.</h2>
-      <p>Nota 5,0 din 141 de recenzii publice pe Google Maps. Le poți citi înainte să suni.</p>
-    </li>
-  </ol>
-
-  <div class="sign">
+<section class="hero hero-split rev">
+  <div class="wrap">
     <div>
-      <svg viewBox="0 0 200 60" aria-hidden="true"><path d="M6 44c14-30 22-34 24-20s-6 22 4 10 16-30 22-18-4 22 8 14 10-22 20-20 2 18 14 14 18-26 26-22 0 16 12 14 20-10 30-12 18 2 26-2" fill="none" stroke="#25389A" stroke-width="2.4" stroke-linecap="round"/></svg>
-      <div class="line">Semnătura și parafa</div>
+      <p class="eyebrow">Stomatologie · Craiova</p>
+      <h1>Un cabinet stomatologic mic, unde ești tratat fără grabă.</h1>
+      <p class="lead">Cabinetul stomatologic Dr. Pirvu Roxana se află pe Strada Basarabia 2, în Craiova. Programările se fac la telefon sau pe WhatsApp.</p>
+      <div class="actions"><a class="btn btn-dark" href="tel:+40744593126"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună pentru programare</a><a class="link" href="https://wa.me/40744593126"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Scrie pe WhatsApp</a></div>
+      <div class="proof"><div><strong>5,0</strong><span><span class="stars" aria-hidden="true">★★★★★</span>141 de recenzii pe Google</span></div></div>
     </div>
-    <div class="type">Valabil oricând ai nevoie.</div>
+    <figure><img src="img/hero.jpg" width="1800" height="1200" alt="Cabinet stomatologic cu scaun albastru și un tablou colorat pe perete"></figure>
   </div>
+</section>
 
-  <p class="margin-note">N.B. Dacă ai radiografii mai vechi, adu-le cu tine.</p>
+<section class="sec alt intro" id="cabinet">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Cabinetul</p>
+      <p class="statement">Pe ușă e numele medicului: <em>dr. Pirvu Roxana</em>. Știi de la început cine te consultă.</p>
+      <p class="lead">Un cabinet mic înseamnă mai puțină agitație și mai mult timp pentru întrebările tale. Afli ce ai și ce variante există, apoi decizi împreună cu medicul.</p>
+    </div>
+    <figure><img src="img/consult.jpg" width="1400" height="1050" loading="lazy" alt="Medic stomatolog examinând dinții unei paciente cu oglinda și sonda"></figure>
+  </div>
+</section>
+
+<section class="sec" id="tratamente">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Tratamente</p><h2>Pentru controale și pentru probleme</h2></div><p class=lead>Fiecare tratament începe cu o consultație. Costurile le afli înainte de orice intervenție.</p></div>
+    <ul class="svc-list">
+      <li><h3>Consultație și control</h3><p>Examinare, explicații clare și un plan de tratament, dacă e nevoie.</p></li>
+      <li><h3>Tratamentul cariilor</h3><p>Obturații care refac forma și funcția dintelui.</p></li>
+      <li><h3>Tratamente de canal</h3><p>Pentru dinții care dor sau sunt infectați, ca să poată fi păstrați.</p></li>
+      <li><h3>Igienizare</h3><p>Curățarea profesională a tartrului și a petelor, pentru gingii sănătoase.</p></li>
+      <li><h3>Lucrări protetice</h3><p>Soluții pentru dinții foarte afectați sau lipsă.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec alt intro rev" id="cum-ajungi">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Cum ajungi</p>
+      <h2 style="margin-top:18px">Cabinetul e într-un bloc de locuințe</h2>
+      <p class="lead">Nu cauta o clinică cu firmă mare: cabinetul se află la apartamentul 3, în blocul I21.</p>
+      <ul class="facts">
+        <li><span>Stradă</span>Strada Basarabia 2</li>
+        <li><span>Bloc / Ap.</span>Bloc I21, apartamentul 3</li>
+        <li><span>Oraș</span>200049 Craiova</li>
+      </ul>
+      <p style="margin-top:26px"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Basarabia%202%2C%20200049%20Craiova"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Deschide traseul în Google Maps</a></p>
+    </div>
+    <figure><img src="img/oglinda.jpg" width="1000" height="1500" loading="lazy" alt="Oglindă stomatologică în prim-plan, cu cabinetul în fundal"></figure>
+  </div>
+</section>
+
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>5,0</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 141 de recenzii<br>pe Google Maps</span></div>
+    <p>Nota medie din recenziile publice ale pacienților, pe Google Maps. Le poți citi pe toate înainte să suni.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Cabinet%20stomatologic%20Dr.%20Pirvu%20Roxana%2C%20Bloc%20I21%2C%20Strada%20Basarabia%202%2C%20Ap%203%2C%20200049%20Craiova">Citește recenziile pe Google</a></div>
+  <img src="img/zambet.jpg" width="1400" height="933" loading="lazy" alt="Femeie zâmbind larg">
+</div></section>
+
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Înainte să vii</h2></div><div><details open><summary>Cum fac o programare?</summary><p>Sună la 0744 593 126 sau scrie pe WhatsApp la același număr. Spune pe scurt motivul vizitei.</p></details><details><summary>Ce să aduc la prima consultație?</summary><p>Un act de identitate și, dacă ai, radiografii mai vechi. Spune-i medicului ce medicamente iei.</p></details><details><summary>Am o durere. Pot fi văzut repede?</summary><p>Sună și descrie situația. Vei afla cât de repede poți fi primit.</p></details><details><summary>Unde găsesc cabinetul?</summary><p>Bloc I21, Strada Basarabia 2, apartamentul 3, Craiova.</p></details></div></div></section>
+
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Programează-te</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40744593126">0744 593 126</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40744593126">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Bloc I21, Strada Basarabia 2, Ap. 3<br>200049 Craiova</dd></dl>
+    <div class="actions"><a class="btn btn-dark" href="tel:+40744593126"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Basarabia%202%2C%20200049%20Craiova">Indicații de drum</a></div>
+  </div>
+  <div class="map"><iframe title="Hartă: Strada Basarabia 2, Craiova" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20Basarabia%202%2C%20200049%20Craiova&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
+
 </main>
-<footer>Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</footer>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>Dr. Pirvu Roxana</b><small>Cabinet stomatologic · Craiova</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=Cabinet%20stomatologic%20Dr.%20Pirvu%20Roxana%2C%20Bloc%20I21%2C%20Strada%20Basarabia%202%2C%20Ap%203%2C%20200049%20Craiova">Strada Basarabia 2, Craiova</a></div>
+      <div>Contact<a href="tel:+40744593126">0744 593 126</a><a href="https://wa.me/40744593126">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© Cabinet stomatologic Dr. Pirvu Roxana</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-dark" href="tel:+40744593126"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40744593126"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
+<script>
+(function(){
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+  }
+})();
+</script>
 </body>
 </html>

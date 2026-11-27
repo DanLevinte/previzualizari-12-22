@@ -4,177 +4,394 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>KINESTART · Recuperare copii și gravide · Constanța</title>
+<title>KINESTART · Kinetoterapie pentru copii și gravide · Constanța</title>
+<meta name="description" content="KINESTART, cabinet de kinetoterapie pentru copii și gravide, Bulevardul 1 Mai 29, Constanța. Programări: 0771 779 093.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,100&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F4EFE4;--ink:#1F2A44;--tomato:#D2461F;--mustard:#F2B035;--ruler:44px}
+:root{--bg:#FBF8F3;--surface:#F3EBE0;--ink:#1E2A3A;--muted:#5A6472;--line:#E4DACC;--accent:#C9512F;--accent-ink:#fff;--accent-soft:#F7DFD3;--display:'Bricolage Grotesque',system-ui,sans-serif;--sans:'Figtree',system-ui,sans-serif;--dw:700;--dls:-.035em;--panel:#F6E4D7;--img-r:18px;--card-r:18px;--btn-r:999px;--brand-ls:.04em;--brand-w:700;--h1max:58px;--card:#fff;--rev-bg:#1E2A3A;--hero-pos:72% center}
+
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font:400 17px/1.55 Rubik,system-ui,sans-serif;padding-left:var(--ruler);overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,.big{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:800;letter-spacing:-.02em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-/* growth-chart ruler = navigation */
-.ruler{position:fixed;left:0;top:0;bottom:0;width:var(--ruler);background:var(--mustard);border-right:2px solid var(--ink);z-index:5;
-  background-image:repeating-linear-gradient(to bottom,var(--ink) 0 2px,transparent 2px 12px),repeating-linear-gradient(to bottom,var(--ink) 0 2px,transparent 2px 60px);
-  background-size:10px 100%,22px 100%;background-repeat:repeat-y;background-position:right top,right top}
-.ruler ol{list-style:none;position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-around;padding:80px 0}
-.ruler a{display:block;writing-mode:vertical-rl;transform:rotate(180deg);text-decoration:none;font:700 12px/1 Rubik;letter-spacing:.14em;text-transform:uppercase;padding:8px 6px 8px 4px;background:var(--mustard)}
-.ruler a span{font-weight:400;opacity:.7}
-.ruler a:hover,.ruler a:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-header{display:flex;justify-content:space-between;align-items:baseline;padding:22px 5vw 0;font-size:14px;gap:1rem;flex-wrap:wrap}
-.logo{font:800 22px/1 Fraunces;letter-spacing:.02em}
-.logo b{color:var(--tomato)}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:4vw;padding:8vh 5vw 10vh;align-items:end}
-.hero h1{font-size:clamp(44px,7.4vw,112px);line-height:.92}
-.hero h1 em{font-style:normal;color:var(--tomato)}
-.hero p{max-width:30ch;margin-top:28px;font-size:19px}
-.tower{width:100%;max-width:300px;justify-self:center}
-.tower .b{transform-box:fill-box;transform-origin:center bottom}
-@media (prefers-reduced-motion:no-preference){
-  .tower .b{animation:drop .7s cubic-bezier(.3,1.6,.5,1) both}
-  .tower .b:nth-child(2){animation-delay:.25s}.tower .b:nth-child(3){animation-delay:.5s}.tower .b:nth-child(4){animation-delay:.75s}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
+
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
+
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
+
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
+
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
+
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
-@keyframes drop{from{transform:translateY(-240px);opacity:0}60%{opacity:1}to{transform:none}}
-
-.cta{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:34px;align-items:center}
-.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;padding:15px 22px;border-radius:999px 999px 999px 4px}
-.btn.alt{background:transparent;color:var(--ink);padding:0;border-radius:0;border-bottom:3px solid var(--tomato)}
-
-section{padding:9vh 5vw;border-top:2px solid var(--ink);position:relative}
-.mark{position:absolute;left:-12px;top:-13px;background:var(--ink);color:var(--paper);font:700 11px/1 Rubik;letter-spacing:.1em;padding:6px 8px 6px 14px}
-.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:5vw}
-h2{font-size:clamp(34px,4.6vw,64px);line-height:1}
-.two p{max-width:46ch;margin-bottom:1em}
-.who{background:var(--ink);color:var(--paper)}
-.who .mark{background:var(--tomato)}
-.who h2{color:var(--mustard)}
-.list{list-style:none;margin-top:1.4em}
-.list li{padding:12px 0;border-bottom:1px dashed currentColor;display:flex;gap:14px}
-.list li::before{content:"";flex:none;width:14px;height:14px;margin-top:6px;background:var(--tomato);border-radius:50%}
-.who .list li::before{background:var(--mustard);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)}
-
-.score{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
-.score .big{font-size:clamp(90px,16vw,220px);line-height:.8;color:var(--tomato)}
-.score p{max-width:22ch;font-size:20px}
-
-.book ol{counter-reset:s;list-style:none;margin-top:1.2em}
-.book ol li{counter-increment:s;padding:14px 0 14px 54px;position:relative;border-bottom:1px solid var(--ink);max-width:52ch}
-.book ol li::before{content:counter(s);position:absolute;left:0;top:10px;width:36px;height:36px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:800 18px/1 Fraunces}
-
-footer{padding:5vh 5vw 8vh;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-size:14px;border-top:2px solid var(--ink)}
-footer address{font-style:normal;font-size:17px}
-.fine{opacity:.75;max-width:40ch}
-
-@media (max-width:760px){
-  :root{--ruler:0px}
-  body{padding-top:40px}
-  .ruler{right:0;bottom:auto;width:auto;height:40px;border-right:0;border-bottom:2px solid var(--ink);
-    background-image:repeating-linear-gradient(to right,var(--ink) 0 2px,transparent 2px 12px),repeating-linear-gradient(to right,var(--ink) 0 2px,transparent 2px 60px);
-    background-size:100% 8px,100% 16px;background-repeat:repeat-x;background-position:left bottom,left bottom}
-  .ruler ol{flex-direction:row;padding:0 8px;align-items:flex-start;justify-content:space-between}
-  .ruler a{writing-mode:horizontal-tb;transform:none;padding:7px 4px;font-size:10px;letter-spacing:.06em}
-  .hero,.two{grid-template-columns:1fr}
-  .tower{max-width:130px;justify-self:end;margin-top:-8px}
-  .mark{left:5vw}
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
 }
+
+
 </style>
 </head>
 <body>
-<nav class="ruler" aria-label="Secțiuni">
-  <ol>
-    <li><a href="#copii">Copii <span>50 cm</span></a></li>
-    <li><a href="#gravide">Gravide <span>100</span></a></li>
-    <li><a href="#programare">Programare <span>150</span></a></li>
-    <li><a href="#unde">Unde <span>170</span></a></li>
-  </ol>
-</nav>
-
-<header>
-  <div class="logo">KINE<b>START</b></div>
-  <div>Recuperare copii &amp; gravide · Constanța</div>
-</header>
-
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bulevardul 1 Mai 29, Constanța</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>5,0 pe Google · 159 de recenzii</span>
+  <a href="tel:+40771779093"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0771 779 093</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>KINESTART</b><small>Recuperare copii &amp; gravide</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#copii">Copii</a><a href="#gravide">Gravide</a><a href="#cum-lucram">Cum lucrăm</a><a href="#contact">Contact</a><a class="btn btn-primary" href="tel:+40771779093">Programează o evaluare</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
 <main>
-<div class="hero">
-  <div>
-    <h1>Pentru copiii care <em>cresc</em>. Pentru mamele care <em>așteaptă</em>.</h1>
-    <p>Kinetoterapie în Constanța, pe Bulevardul 1 Mai. Pași mici, făcuți corect, de la primul consult.</p>
-    <div class="cta">
-      <a class="btn" href="https://wa.me/40771779093">Scrie pe WhatsApp</a>
-      <a class="btn alt" href="tel:+40771779093">0771 779 093</a>
-    </div>
-  </div>
-  <svg class="tower" viewBox="0 0 200 260" role="img" aria-label="Turn de cuburi de jucărie">
-    <rect class="b" x="20" y="200" width="160" height="56" fill="#1F2A44"/>
-    <rect class="b" x="45" y="140" width="110" height="60" fill="#D2461F"/>
-    <path class="b" d="M60 140 A40 40 0 0 1 140 140 Z" fill="#F2B035" stroke="#1F2A44" stroke-width="3"/>
-    <circle class="b" cx="100" cy="72" r="26" fill="#1F2A44"/>
-  </svg>
-</div>
 
-<section id="copii">
-  <span class="mark">50 CM — COPII</span>
-  <div class="two">
-    <h2>Fiecare copil are ritmul lui.</h2>
-    <div>
-      <p>Ne uităm la cum stă, cum se ridică, cum merge și cum aleargă copilul tău. Apoi lucrăm de acolo, prin joc și exerciții pe măsura vârstei.</p>
-      <p>Tu stai alături, vezi ce facem și pleci acasă știind ce poți repeta.</p>
-    </div>
+<section class="hero hero-panel">
+  <div class="txt">
+    <p class="eyebrow">Kinetoterapie · Constanța</p>
+    <h1>Mișcare care ajută copiii să crească și mămicile să se simtă bine.</h1>
+    <p class="lead">KINESTART este un cabinet de recuperare pentru copii și gravide, pe Bulevardul 1 Mai 29. Exercițiile sunt adaptate vârstei copilului sau etapei sarcinii.</p>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40771779093"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Programează o evaluare</a><a class="link" href="https://wa.me/40771779093"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Scrie pe WhatsApp</a></div>
+    <div class="proof"><div><strong>5,0</strong><span><span class="stars" aria-hidden="true">★★★★★</span>159 de recenzii pe Google</span></div><div><strong>Constanța</strong><span>Bd. 1 Mai 29</span></div></div>
   </div>
+  <figure><img src="img/hero.jpg" width="1600" height="1068" alt="Kinetoterapeută lucrând cu un copil care stă pe un căluț de lemn"></figure>
 </section>
 
-<section id="gravide" class="who">
-  <span class="mark">100 CM — GRAVIDE</span>
-  <div class="two">
-    <h2>Sarcina schimbă felul în care te miști.</h2>
-    <div>
-      <p>Spatele, bazinul, respirația — corpul se reorganizează lună de lună. Mișcarea potrivită te ajută să rămâi în contact cu el.</p>
-      <ul class="list">
-        <li>În timpul sarcinii</li>
-        <li>Cu exerciții pe care le poți face și acasă</li>
-      </ul>
+<section class="sec" id="copii">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Pentru cine</p><h2>Două categorii de pacienți, aceeași răbdare</h2></div><p class=lead>Fiecare program începe cu o evaluare. Abia apoi stabilim exercițiile și ritmul.</p></div>
+    <div class="split2">
+      <article><img src="img/copii.jpg" width="1400" height="933" loading="lazy" alt="Kinetoterapeută care bate palma cu un băiat întins pe masa de exerciții">
+        <div class="body"><p class="eyebrow">Copii</p><h3 style="margin-top:12px">Recuperare prin joc</h3>
+          <p>Pentru copiii care au nevoie de sprijin în dezvoltarea motorie, în postură sau după o problemă medicală. Exercițiile arată ca o joacă, ca cel mic să vină cu drag.</p>
+          <ul><li>Evaluare la prima întâlnire</li><li>Exerciții potrivite vârstei</li><li>Sfaturi pentru părinți, pentru acasă</li></ul></div></article>
+      <article id="gravide"><img src="img/gravide.jpg" width="1200" height="1264" loading="lazy" alt="Femeie însărcinată făcând exerciții de întindere cu o bandă elastică">
+        <div class="body"><p class="eyebrow">Gravide</p><h3 style="margin-top:12px">Mișcare blândă în sarcină</h3>
+          <p>Sarcina schimbă postura și felul în care te miști. Exercițiile potrivite pentru spate, bazin și respirație te ajută să te simți mai bine de la o lună la alta.</p>
+          <ul><li>Exerciții adaptate etapei sarcinii</li><li>Ținem cont de recomandările medicului tău</li><li>Exerciții pe care le poți repeta acasă</li></ul></div></article>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="score">
-    <span class="big">5,0</span>
-    <p>din 159 de recenzii pe Google Maps.</p>
-  </div>
-</section>
+<section class="sec alt steps" id=cum-lucram><div class="wrap"><p class="eyebrow">Cum lucrăm</p><h2 style="margin:18px 0 clamp(40px,6vh,60px);max-width:18ch">De la primul telefon la primele progrese</h2><div class="grid"><div class="step"><h3>Evaluarea</h3><p>Ne uităm la cum se mișcă cel mic sau la ce te deranjează pe tine și discutăm ce vrei să obții.</p></div><div class="step"><h3>Planul</h3><p>Stabilim exercițiile, numărul de ședințe și ritmul potrivit.</p></div><div class="step"><h3>Ședințele</h3><p>Lucrăm împreună în cabinet și primești exerciții simple pentru acasă.</p></div></div></div></section>
 
-<section id="programare" class="book">
-  <span class="mark">150 CM — PROGRAMARE</span>
-  <div class="two">
-    <h2>Trei rânduri pe WhatsApp sunt de ajuns.</h2>
-    <div>
-      <ol>
-        <li>Vârsta copilului sau săptămâna de sarcină.</li>
-        <li>Ce ai observat sau ce te îngrijorează, pe scurt.</li>
-        <li>Zilele în care poți veni.</li>
-      </ol>
-      <div class="cta">
-        <a class="btn" href="https://wa.me/40771779093">Deschide WhatsApp</a>
-        <a class="btn alt" href="tel:+40771779093">sau sună: 0771 779 093</a>
-      </div>
-    </div>
+<div class="band"><img src="img/joaca.jpg" width="1400" height="933" loading="lazy" alt="Kinetoterapeută și o fetiță zâmbind lângă jucării de dezvoltare motorie"></div>
+
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>5,0</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 159 de recenzii<br>pe Google Maps</span></div>
+    <p>Nota medie din recenziile publice lăsate pe Google Maps. Le poți citi pe toate înainte să suni.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=KINESTART%20Recuperare%20copii/gravide%20Constan%C8%9Ba%2C%20Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba">Citește recenziile pe Google</a></div>
+  <img src="img/masa.jpg" width="1400" height="933" loading="lazy" alt="Kinetoterapeută jucându-se cu un copil la masa de exerciții">
+</div></section>
+
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Înainte să vii</h2></div><div><details open><summary>Cum fac o programare?</summary><p>Sună la 0771 779 093 sau scrie pe WhatsApp. Spune vârsta copilului sau săptămâna de sarcină și ce te îngrijorează.</p></details><details><summary>Ce aducem la prima ședință?</summary><p>Haine comode și, dacă există, documente medicale sau recomandări de la medic.</p></details><details><summary>Pot face exerciții în timpul sarcinii?</summary><p>Discutăm întâi cu tine și ținem cont de recomandările medicului care îți urmărește sarcina.</p></details><details><summary>Unde se află cabinetul?</summary><p>Pe Bulevardul 1 Mai 29, în Constanța. Harta e mai jos.</p></details></div></div></section>
+
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Programează o evaluare</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40771779093">0771 779 093</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40771779093">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Bulevardul 1 Mai 29<br>900178 Constanța</dd></dl>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40771779093"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba">Indicații de drum</a></div>
   </div>
-</section>
+  <div class="map"><iframe title="Hartă: Bulevardul 1 Mai 29, Constanța" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
+
 </main>
-
-<footer id="unde">
-  <address>
-    <strong>KINESTART</strong><br>
-    Bulevardul 1 Mai 29<br>900178 Constanța<br>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=KINESTART%20Recuperare%20copii%2Fgravide%20Constan%C8%9Ba%2C%20Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba">Deschide în Google Maps →</a>
-  </address>
-  <p class="fine">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</p>
-</footer>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>KINESTART</b><small>Recuperare copii &amp; gravide</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=KINESTART%20Recuperare%20copii/gravide%20Constan%C8%9Ba%2C%20Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba">Bulevardul 1 Mai 29, Constanța</a></div>
+      <div>Contact<a href="tel:+40771779093">0771 779 093</a><a href="https://wa.me/40771779093">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© KINESTART Recuperare copii/gravide Constanța</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-primary" href="tel:+40771779093"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40771779093"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
+<script>
+(function(){
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+  }
+})();
+</script>
 </body>
 </html>

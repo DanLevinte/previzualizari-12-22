@@ -4,111 +4,408 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Templu Holistic Home · Masaj · Brașov</title>
+<title>Templu Holistic Home · Masaj în Brașov</title>
+<meta name="description" content="Templu Holistic Home, masaj pe Strada Hermann Oberth 37, Brașov. Programări: 0723 083 633.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F3EBDC;--teal:#00727A;--yellow:#FFB511;--ink:#1E2B2C}
+:root{--bg:#F4EFE8;--surface:#E9E0D4;--ink:#2A221D;--muted:#6B5E54;--line:#DCD0C1;--accent:#8C5A3C;--accent-ink:#fff;--accent-soft:#EAD9CB;--display:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--dw:500;--dls:-.01em;--h1max:92px;--h2max:64px;--h3:30px;--img-r:0;--btn-r:0;--brand-size:28px;--brand-ls:.01em;--panel:#2A221D;--panel-ink:#F4EFE8;--panel-muted:#CDBFB2;--panel-line:#4A3F37;--rev-bg:#8C5A3C;--hero-pos:center 30%;--accent-text:#8C5A3C}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font:400 18px/1.6 "Hanken Grotesk",system-ui,sans-serif;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-/* riso grain */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.33;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .1 0 0 0 0 .1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-.poster{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr minmax(0,.55fr);padding:4vh 4vw;overflow:hidden}
-.sun{position:absolute;border-radius:50%;mix-blend-mode:multiply}
-.sun.y{width:62vmin;height:62vmin;background:var(--yellow);right:6vw;top:12vh}
-.sun.t{width:40vmin;height:40vmin;background:var(--teal);right:24vw;top:44vh;opacity:.9}
-.word{position:relative;font:400 clamp(84px,17vw,260px)/.82 Gloock,serif;letter-spacing:-.03em;color:var(--teal)}
-.word::before{content:attr(data-w);position:absolute;inset:0;color:var(--yellow);transform:translate(5px,-4px);mix-blend-mode:multiply;z-index:-1;white-space:pre-line}
-.wordbox{position:relative;align-self:end}
-.kick{font:500 clamp(14px,1.4vw,18px)/1.3 "Hanken Grotesk";letter-spacing:.32em;text-transform:uppercase;margin:0 0 3vh 6px}
-.vert{position:relative;writing-mode:vertical-rl;justify-self:end;align-self:start;font:500 13px/1 "Hanken Grotesk";letter-spacing:.4em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-.slow{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:4vw;padding:16vh 4vw 12vh}
-.slow h2{grid-column:2;font:400 clamp(38px,4.6vw,68px)/1.02 Gloock;color:var(--teal)}
-.slow .p{grid-column:2;max-width:40ch}
-.slow .p p{margin-top:1em}
-.slow aside{grid-column:3;grid-row:1/3;align-self:end;font-size:15px;border-top:2px solid var(--yellow);padding-top:12px}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-.band{background:var(--teal);color:var(--paper);padding:10vh 4vw;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4vw;align-items:end}
-.band .big{font:400 clamp(110px,18vw,260px)/.8 Gloock;color:var(--yellow)}
-.band p{max-width:30ch;font-size:20px}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
 
-.stub{margin:12vh 4vw 6vh auto;max-width:640px;border:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) 120px;position:relative}
-.stub .main{padding:28px 30px}
-.stub .tear{border-left:2px dashed var(--ink);writing-mode:vertical-rl;display:flex;align-items:center;justify-content:center;font:400 28px Gloock;color:var(--teal);background:var(--yellow)}
-.stub h2{font:400 34px/1.05 Gloock;margin-bottom:16px}
-.stub a.tel{display:block;font:700 clamp(28px,4vw,40px)/1.1 "Hanken Grotesk";text-decoration:none;color:var(--teal)}
-.stub p{margin-top:12px}
-footer{padding:0 4vw 6vh;font-size:13px;max-width:70ch}
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
 
-@media (hover:hover) and (pointer:fine){
-  body{cursor:none}
-  a{cursor:none}
-  .cur{position:fixed;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--yellow);mix-blend-mode:multiply;pointer-events:none;z-index:60;transform:translate(-50%,-50%);transition:width .25s,height .25s}
-  .cur.on{width:64px;height:64px;background:var(--teal);opacity:.6}
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
+
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
+
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
+
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
-@media (hover:none),(pointer:coarse){.cur{display:none}}
-
-@media (max-width:760px){
-  .poster{grid-template-columns:1fr;min-height:92vh;padding:24px 18px}
-  .vert{position:absolute;right:16px;top:24px}
-  .sun.y{width:78vw;height:78vw;right:-12vw;top:10vh}
-  .sun.t{width:52vw;height:52vw;right:30vw;top:34vh}
-  .slow{grid-template-columns:1fr;padding:12vh 18px 10vh}
-  .slow>*{grid-column:1 !important;grid-row:auto !important}
-  .slow aside{margin-top:20px}
-  .band{grid-template-columns:1fr;padding:9vh 18px}
-  .stub{margin:10vh 18px 5vh;grid-template-columns:1fr 64px}
-  .stub .main{padding:22px 18px}
-  footer{padding:0 18px 5vh}
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
 }
+
+.hero-panel .txt .eyebrow{color:#D9B79E}.hero-panel .btn-primary:hover{background:#F4EFE8;color:#2A221D}.hero-panel .link{color:#F4EFE8}
 </style>
 </head>
 <body>
-<div class="cur" aria-hidden="true"></div>
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Strada Hermann Oberth 37, Brașov</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>4,9 pe Google · 63 de recenzii</span>
+  <a href="tel:+40723083633"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0723 083 633</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>Templu Holistic Home</b><small>Masaj · Brașov</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#spatiul">Spațiul</a><a href="#pentru-ce">Pentru ce vii</a><a href="#programare">Programare</a><a href="#contact">Contact</a><a class="btn btn-primary" href="tel:+40723083633">Rezervă o oră</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
 <main>
-  <header class="poster">
-    <span class="sun y" aria-hidden="true"></span>
-    <span class="sun t" aria-hidden="true"></span>
-    <div class="wordbox"><p class="kick">Masaj · Brașov</p>
-    <h1 class="word" data-w="Templu
-Holistic
-Home">Templu<br>Holistic<br>Home</h1></div>
-    <span class="vert" aria-hidden="true">Strada Hermann Oberth 37</span>
-  </header>
 
-  <section class="slow">
-    <h2>Un templu mic. Ușa se închide, orașul rămâne afară.</h2>
-    <div class="p">
-      <p>Brașovul merge repede. Aici, pentru un timp, nu mai trebuie să mergi nicăieri.</p>
-      <p>Spune ce te apasă — umerii, spatele, o săptămână lungă — și de acolo începem.</p>
+<section class="hero hero-panel">
+  <div class="txt">
+    <p class="eyebrow">Masaj · Brașov</p>
+    <h1>O oră doar pentru tine.</h1>
+    <p class="lead">Templu Holistic Home este un spațiu pentru masaj și relaxare pe Strada Hermann Oberth 37, în Brașov. Lași grijile la ușă și te întorci la ele mai ușor.</p>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40723083633"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Rezervă o oră</a><a class="link" href="https://wa.me/40723083633"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Scrie pe WhatsApp</a></div>
+    <div class="proof"><div><strong>4,9</strong><span><span class="stars" aria-hidden="true">★★★★★</span>63 de recenzii pe Google</span></div></div>
+  </div>
+  <figure><img src="img/hero.jpg" width="1400" height="2100" alt="Mâinile unei terapeute masând spatele unei persoane, în lumină naturală"></figure>
+</section>
+
+<section class="sec intro" id="spatiul">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Spațiul</p>
+      <p class="statement">Un templu mic, ca acasă. Lumină caldă, liniște și <em>timp care nu se grăbește</em>.</p>
+      <p class="lead">Spune la telefon ce simți și ce te deranjează. Ședința se adaptează nevoilor tale, nu invers.</p>
     </div>
-    <aside>Când suni, spune dacă e prima dată. Primești toate detaliile la telefon.</aside>
-  </section>
+    <figure><img src="img/ulei.jpg" width="1400" height="933" loading="lazy" alt="Ulei de masaj picurat în palmă, pe fundal întunecat"></figure>
+  </div>
+</section>
 
-  <section class="band">
-    <span class="big">4,9</span>
-    <p>din 63 de recenzii pe Google Maps. Liniștea se pare că se simte și din afară.</p>
-  </section>
+<section class="sec alt" id="pentru-ce">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Pentru ce vii</p><h2>Oamenii ajung aici din motive diferite</h2></div><p class=lead>Tipurile de masaj și durata ședințelor le afli la telefon, în funcție de ce ai nevoie.</p></div>
+    <ul class="svc-rows">
+      <li><h3>Umeri și spate încordați</h3><p>După zile lungi la birou, la volan sau în picioare.</p></li>
+      <li><h3>Stres și oboseală</h3><p>Când ai nevoie să te deconectezi cu adevărat.</p></li>
+      <li><h3>Un moment doar al tău</h3><p>Fără motiv anume. Pentru că ai nevoie de o pauză.</p></li>
+      <li><h3>Un cadou</h3><p>O oră de liniște pentru cineva drag. Întreabă la telefon cum se poate face.</p></li>
+    </ul>
+  </div>
+</section>
 
-  <section class="stub" id="programare">
-    <div class="main">
-      <h2>Rezervă-ți ora</h2>
-      <a class="tel" href="tel:+40723083633">0723 083 633</a>
-      <p><a href="https://wa.me/40723083633">Scrie pe WhatsApp</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Templu%20Holistic%20Home%2C%20Strada%20Hermann%20Oberth%2037%2C%20500331%20Bra%C8%99ov">Str. Hermann Oberth 37, Brașov</a></p>
+<section class="sec">
+  <div class="wrap">
+    <div class="gallery">
+      <img src="img/masaj.jpg" width="1600" height="1067" loading="lazy" class="g1" alt="Terapeută masând spatele unei paciente întinse pe masă">
+      <img src="img/pietre.jpg" width="1400" height="933" loading="lazy" alt="Pietre calde așezate pe spatele unei persoane întinse pe masa de masaj">
+      <img src="img/maini.jpg" width="1200" height="800" loading="lazy" alt="Masaj al mâinii, pe un prosop moale">
     </div>
-    <div class="tear" aria-hidden="true">admis</div>
-  </section>
+  </div>
+</section>
+
+<section class="sec alt steps" id=programare><div class="wrap"><p class="eyebrow">Programare</p><h2 style="margin:18px 0 clamp(40px,6vh,60px);max-width:18ch">Cum ajungi la prima ședință</h2><div class="grid"><div class="step"><h3>Suni sau scrii</h3><p>Spui ce te deranjează sau de ce ai nevoie și alegi o zi.</p></div><div class="step"><h3>Stabilim împreună</h3><p>Afli ce tip de ședință ți se potrivește și cât durează.</p></div><div class="step"><h3>Vii și te relaxezi</h3><p>Restul e simplu: telefonul pe silențios și o oră pentru tine.</p></div></div></div></section>
+
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 63 de recenzii<br>pe Google Maps</span></div>
+    <p>Nota medie din recenziile publice lăsate pe Google Maps. Le poți citi pe toate înainte să rezervi.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Templu%20Holistic%20Home%2C%20Strada%20Hermann%20Oberth%2037%2C%20500331%20Bra%C8%99ov">Citește recenziile pe Google</a></div>
+  <img src="img/lumanari.jpg" width="1000" height="1500" loading="lazy" alt="Lumânări și prosop într-un spațiu de relaxare">
+</div></section>
+
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Bine de știut</h2></div><div><details open><summary>Cum rezerv o ședință?</summary><p>Sună la 0723 083 633 sau scrie pe WhatsApp. Spune ce îți dorești și ce zile ți se potrivesc.</p></details><details><summary>Ce tipuri de masaj sunt disponibile?</summary><p>Afli la telefon variantele și durata, în funcție de ce ai nevoie.</p></details><details><summary>Trebuie să aduc ceva?</summary><p>Nu e nevoie de nimic special. Vino cu câteva minute mai devreme, ca să nu te grăbești.</p></details><details><summary>Unde se află?</summary><p>Pe Strada Hermann Oberth 37, în Brașov.</p></details></div></div></section>
+
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Rezervă o oră</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40723083633">0723 083 633</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40723083633">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Strada Hermann Oberth 37<br>500331 Brașov</dd></dl>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40723083633"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Strada%20Hermann%20Oberth%2037%2C%20500331%20Bra%C8%99ov">Indicații de drum</a></div>
+  </div>
+  <div class="map"><iframe title="Hartă: Strada Hermann Oberth 37, Brașov" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Strada%20Hermann%20Oberth%2037%2C%20500331%20Bra%C8%99ov&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
+
 </main>
-<footer>Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</footer>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>Templu Holistic Home</b><small>Masaj · Brașov</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=Templu%20Holistic%20Home%2C%20Strada%20Hermann%20Oberth%2037%2C%20500331%20Bra%C8%99ov">Strada Hermann Oberth 37, Brașov</a></div>
+      <div>Contact<a href="tel:+40723083633">0723 083 633</a><a href="https://wa.me/40723083633">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© Templu Holistic Home</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-primary" href="tel:+40723083633"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40723083633"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
 <script>
 (function(){
-  var c=document.querySelector('.cur');if(!c||!matchMedia('(pointer:fine)').matches)return;
-  addEventListener('pointermove',function(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';c.classList.toggle('on',!!e.target.closest('a'))});
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+  }
 })();
 </script>
 </body>

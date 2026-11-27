@@ -5,151 +5,408 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>PedoDent · Stomatologie pentru copii · Constanța</title>
+<meta name="description" content="PedoDent, stomatologie pentru copii, Bulevardul Ferdinand 94, Sc. B, parter, Constanța. Programări: 0734 390 053.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Schibsted+Grotesk:wght@400;600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#FDFCF7;--grid:#C7D9EA;--red:#D3352B;--lead:#2E2E2E;--hl:#FFE45C}
+:root{--bg:#FFFCF6;--surface:#FFF1D8;--ink:#1D2B36;--muted:#56626C;--line:#EEE1C8;--accent:#E0663A;--accent-ink:#fff;--accent-soft:#FFE2D3;--accent-text:#B9481F;--display:'Fredoka',system-ui,sans-serif;--sans:'Nunito',system-ui,sans-serif;--dw:600;--dls:-.01em;--img-r:26px;--card-r:22px;--btn-r:999px;--h1max:74px;--brand-size:28px;--brand-ls:0;--brand-w:600;--card:#fff;--panel:#FFF1D8;--hero-pos:center 30%;--rev-bg:#1D2B36}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--paper);color:var(--lead);font:400 18px/1.55 "Schibsted Grotesk",system-ui,sans-serif;overflow-x:hidden;
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.hand{font-family:"Patrick Hand",cursive}
-.margin{position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--red);opacity:.6;pointer-events:none}
-.wrap{padding:0 5vw 0 96px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:1rem;flex-wrap:wrap}
-.name{font:900 26px/1 "Schibsted Grotesk";letter-spacing:-.02em}
-.name span{color:var(--red)}
-header nav a{margin-left:18px;font-size:22px;text-decoration:none}
-header nav a:hover{text-decoration:underline wavy var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3vw;padding:6vh 0 8vh;align-items:center}
-h1{font:900 clamp(46px,7.2vw,104px)/.94 "Schibsted Grotesk";letter-spacing:-.04em}
-mark{background:linear-gradient(transparent 52%,var(--hl) 52% 90%,transparent 90%);color:inherit;padding:0 .08em}
-.hero p{font-size:clamp(22px,2.2vw,28px);margin-top:24px;max-width:24ch}
-.scribble{color:var(--red);font-size:26px;transform:rotate(-4deg);display:inline-block;margin-top:24px}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-/* baby teeth chart, FDI numbering 51-85 */
-.chart{background:var(--paper);border:2px solid var(--lead);padding:16px 16px 12px;position:relative;transform:rotate(1.2deg)}
-.chart svg{width:100%;display:block}
-.chart .t{fill:#fff;stroke:var(--lead);stroke-width:2;cursor:pointer;transition:fill .15s}
-.chart g:hover .t,.chart g:focus .t,.chart g.on .t{fill:var(--hl)}
-.chart g:focus{outline:none}
-.chart text{font:400 13px "Patrick Hand";fill:var(--lead)}
-.chart .lbl{font-size:20px;fill:var(--red)}
-.chart figcaption{font:400 19px/1.3 "Patrick Hand";border-top:1px dashed var(--lead);padding-top:8px;margin-top:6px;min-height:2.6em}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
 
-.row{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:3vw;padding:7vh 0;border-top:2px solid var(--lead)}
-.row .k{font:400 30px/1 "Patrick Hand";color:var(--red)}
-.row h2{font:900 clamp(30px,3.8vw,52px)/1 "Schibsted Grotesk";letter-spacing:-.03em;margin-bottom:16px;max-width:20ch}
-.row p{max-width:54ch;margin-bottom:.8em}
-.checks{list-style:none;margin-top:8px}
-.checks li{font:400 23px/1.4 "Patrick Hand";padding-left:36px;position:relative;margin:4px 0}
-.checks li::before{content:"";position:absolute;left:0;top:7px;width:20px;height:20px;border:2px solid var(--lead)}
-.checks li::after{content:"";position:absolute;left:5px;top:3px;width:9px;height:16px;border:solid var(--red);border-width:0 3px 3px 0;transform:rotate(40deg)}
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
 
-.contact{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:baseline}
-.contact a.big{font:900 clamp(32px,5vw,64px)/1 "Schibsted Grotesk";letter-spacing:-.03em;text-decoration:none}
-.contact a.big:hover{background:var(--hl)}
-footer{border-top:2px solid var(--lead);padding:24px 0 48px;font-size:14px;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
 
-@media (max-width:820px){
-  .margin{left:20px}
-  .wrap{padding:0 18px 0 36px}
-  header nav a{margin:0 14px 0 0}
-  .hero,.row{grid-template-columns:1fr}
-  .chart{transform:none}
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
+
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
+
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
+
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
+}
+
+.hero-panel figure img{border-radius:0 0 0 48px}@media (max-width:960px){.hero-panel figure img{border-radius:0}}
 </style>
 </head>
 <body>
-<div class="margin" aria-hidden="true"></div>
-<div class="wrap">
-  <header>
-    <div class="name">Pedo<span>Dent</span></div>
-    <nav class="hand"><a href="#parinti">pentru părinți</a><a href="#programare">programare</a></nav>
-  </header>
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bd. Ferdinand 94, Constanța</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>4,8 pe Google · 58 de recenzii</span>
+  <a href="tel:+40734390053"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0734 390 053</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>Pedo<span style='color:#E0663A'>Dent</span></b><small>Stomatologie pentru copii · Constanța</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#parinti">Pentru părinți</a><a href="#tratamente">Tratamente</a><a href="#intrebari">Întrebări</a><a href="#contact">Contact</a><a class="btn btn-primary" href="tel:+40734390053">Programează-te</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main>
 
-  <main>
-    <div class="hero">
-      <div>
-        <h1>Dentist pentru <mark>dinți de lapte</mark> și pentru cei care vin după.</h1>
-        <p>Stomatologie pentru copii, pe Bulevardul Ferdinand, în Constanța.</p>
-        <span class="scribble hand">← tema de azi: niciun plâns</span>
-      </div>
-      <figure class="chart">
-        <svg viewBox="0 0 340 250" aria-label="Schema celor 20 de dinți de lapte, cu numerotarea folosită de stomatologi">
-          <text class="lbl" x="170" y="22" text-anchor="middle">sus</text>
-          <text class="lbl" x="170" y="244" text-anchor="middle">jos</text>
-          <g id="teeth"></g>
-        </svg>
-        <figcaption id="cap">Atinge un dinte. Stomatologii îi spun pe număr.</figcaption>
-      </figure>
+<section class="hero hero-panel">
+  <div class="txt">
+    <p class="eyebrow">Stomatologie pentru copii · Constanța</p>
+    <h1>Prima vizită la dentist poate fi una liniștită.</h1>
+    <p class="lead">PedoDent este un cabinet de stomatologie pentru copii pe Bulevardul Ferdinand 94. Cu răbdare, explicații pe înțelesul celor mici și părintele aproape.</p>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40734390053"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Programează o vizită</a><a class="link" href="https://wa.me/40734390053"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Scrie pe WhatsApp</a></div>
+    <div class="proof"><div><strong>4,8</strong><span><span class="stars" aria-hidden="true">★★★★★</span>58 de recenzii pe Google</span></div><div><strong>Bd. Ferdinand 94</strong><span>Scara B, parter</span></div></div>
+  </div>
+  <figure><img src="img/hero.jpg" width="1400" height="1867" alt="Medic stomatolog consultând un copil în scaunul dentar"></figure>
+</section>
+
+<section class="sec" id="parinti">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Pentru părinți</p><h2>Cum pregătești copilul pentru dentist</h2></div><p class=lead>Felul în care decurge prima vizită contează: de ea depinde cum va privi copilul dentistul ani de zile.</p></div>
+    <ul class="checks">
+      <li>Spune-i pe scurt și pe un ton liniștit unde mergeți</li>
+      <li>Evită cuvinte ca „durere” sau „înțeapă”</li>
+      <li>Vino la un control înainte să apară o problemă</li>
+      <li>Adu-i jucăria preferată, dacă îl liniștește</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec alt" id="tratamente">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Tratamente</p><h2>Ce facem la PedoDent</h2></div><p class=lead>Planul și costurile le afli la consultație, înainte de orice tratament.</p></div>
+    <ul class="svc-cards" style="--cols:2">
+      <li><h3>Prima vizită</h3><p>Copilul face cunoștință cu cabinetul și cu medicul, fără grabă.</p></li>
+      <li><h3>Controale periodice</h3><p>Ca problemele să fie prinse cât sunt mici.</p></li>
+      <li><h3>Tratamentul dinților de lapte</h3><p>Dinții de lapte contează: țin locul celor definitivi.</p></li>
+      <li><h3>Prevenție și igienă</h3><p>Sfaturi practice despre periaj și alimentație, pentru copil și pentru părinți.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec intro">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Cabinetul</p>
+      <p class="statement">Un loc gândit pentru copii, unde <em>explicăm înainte să facem</em>.</p>
+      <p class="lead">Copilul află ce urmează, în cuvinte simple. Părintele știe tot timpul ce se întâmplă.</p>
     </div>
+    <figure><img src="img/zambet.jpg" width="1400" height="933" loading="lazy" alt="Băiat zâmbitor în scaunul stomatologic, alături de medic"></figure>
+  </div>
+</section>
 
-    <section class="row" id="parinti">
-      <span class="k">01.</span>
-      <div>
-        <h2>Prima vizită contează cel mai mult.</h2>
-        <p>Un copil care pleacă liniștit de la prima vizită revine fără teamă. De aceea merită să vii înainte să doară ceva.</p>
-        <ul class="checks">
-          <li>spune-i copilului unde mergeți, pe scurt</li>
-          <li>adu-i jucăria preferată</li>
-          <li>sună dinainte și spune vârsta lui</li>
-        </ul>
-      </div>
-    </section>
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>4,8</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 58 de recenzii<br>pe Google Maps</span></div>
+    <p>Nota medie din recenziile publice lăsate pe Google Maps. Le poți citi pe toate pe profilul PedoDent.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=PedoDent%2C%20Bulevardul%20Ferdinand%2094%2C%20SC.%20B%2C%20PARTER%2C%20900709%20Constan%C8%9Ba">Citește recenziile pe Google</a></div>
+  <img src="img/cabinet.jpg" width="1000" height="1500" loading="lazy" alt="Medic stomatolog tratând un copil">
+</div></section>
 
-    <section class="row">
-      <span class="k">02.</span>
-      <div>
-        <h2>4,8 pe Google, din 58 de recenzii.</h2>
-        <p>Le poți citi pe toate pe profilul public PedoDent din Google Maps.</p>
-      </div>
-    </section>
+<div id="intrebari"></div>
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Ce întreabă părinții</h2></div><div><details open><summary>De la ce vârstă îl aduc la dentist?</summary><p>Recomandarea generală este o primă vizită în jurul vârstei de un an sau la apariția primilor dinți. La telefon afli ce e potrivit pentru copilul tău.</p></details><details><summary>Cum fac o programare?</summary><p>Sună la 0734 390 053 sau scrie pe WhatsApp. Spune vârsta copilului și motivul vizitei.</p></details><details><summary>Pot sta lângă copil în timpul consultației?</summary><p>Întreabă la programare. Pentru cei mici, prezența părintelui e de obicei liniștitoare.</p></details><details><summary>Unde e cabinetul?</summary><p>Pe Bulevardul Ferdinand 94, scara B, la parter, în Constanța.</p></details></div></div></section>
 
-    <section class="row" id="programare">
-      <span class="k">03.</span>
-      <div>
-        <h2>Programare</h2>
-        <div class="contact">
-          <a class="big" href="tel:+40734390053">0734 390 053</a>
-          <a class="hand" style="font-size:24px" href="https://wa.me/40734390053">sau pe WhatsApp →</a>
-        </div>
-        <p style="margin-top:22px">Bulevardul Ferdinand 94, scara B, parter, 900709 Constanța.<br>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=PedoDent%2C%20Bulevardul%20Ferdinand%2094%2C%20900709%20Constan%C8%9Ba">Deschide în Google Maps</a></p>
-      </div>
-    </section>
-  </main>
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Programează o vizită</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40734390053">0734 390 053</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40734390053">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Bulevardul Ferdinand 94<br>Scara B, parter<br>900709 Constanța</dd></dl>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40734390053"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bulevardul%20Ferdinand%2094%2C%20900709%20Constan%C8%9Ba">Indicații de drum</a></div>
+  </div>
+  <div class="map"><iframe title="Hartă: Bd. Ferdinand 94, Constanța" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bulevardul%20Ferdinand%2094%2C%20900709%20Constan%C8%9Ba&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
 
-  <footer>
-    <span class="hand" style="font-size:20px">PedoDent · Constanța</span>
-    <span>Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</span>
-  </footer>
-</div>
+</main>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>Pedo<span style='color:#E0663A'>Dent</span></b><small>Stomatologie pentru copii · Constanța</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=PedoDent%2C%20Bulevardul%20Ferdinand%2094%2C%20SC.%20B%2C%20PARTER%2C%20900709%20Constan%C8%9Ba">Bd. Ferdinand 94, Constanța</a></div>
+      <div>Contact<a href="tel:+40734390053">0734 390 053</a><a href="https://wa.me/40734390053">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© PedoDent</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-primary" href="tel:+40734390053"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40734390053"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
 <script>
 (function(){
-  // FDI numbering for primary teeth: 55..51 | 61..65 (upper), 85..81 | 71..75 (lower)
-  var names={1:'incisiv central',2:'incisiv lateral',3:'canin',4:'primul molar',5:'al doilea molar'};
-  var g=document.getElementById('teeth'),cap=document.getElementById('cap'),ns='http://www.w3.org/2000/svg';
-  function arch(q1,q2,up){
-    var order=[5,4,3,2,1].map(function(n){return [q1,n]}).concat([1,2,3,4,5].map(function(n){return [q2,n]}));
-    order.forEach(function(p,i){
-      var a=Math.PI*(0.08+0.84*i/9), r=118;
-      var x=170-Math.cos(a)*r, y=up?(132-Math.sin(a)*82):(118+Math.sin(a)*82);
-      var w=p[1]>=4?28:(p[1]==3?22:20), h=p[1]>=4?24:28;
-      var el=document.createElementNS(ns,'g');el.setAttribute('tabindex','0');el.setAttribute('role','button');
-      var num=''+p[0]+p[1];el.setAttribute('aria-label','dintele '+num);
-      var r1=document.createElementNS(ns,'rect');r1.setAttribute('class','t');r1.setAttribute('x',x-w/2);r1.setAttribute('y',y-h/2);r1.setAttribute('width',w);r1.setAttribute('height',h);r1.setAttribute('rx',p[1]>=4?8:10);
-      var t=document.createElementNS(ns,'text');t.setAttribute('x',x);t.setAttribute('y',y+4);t.setAttribute('text-anchor','middle');t.textContent=num;
-      el.appendChild(r1);el.appendChild(t);g.appendChild(el);
-      function pick(){[].forEach.call(g.children,function(c){c.classList.remove('on')});el.classList.add('on');
-        cap.textContent='Dintele '+num+': '+names[p[1]]+', '+(up?'sus':'jos')+' '+((p[0]==5||p[0]==8)?'în dreapta':'în stânga')+' copilului.';}
-      el.addEventListener('click',pick);el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}});
-    });
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
   }
-  arch(5,6,true);arch(8,7,false);
 })();
 </script>
 </body>

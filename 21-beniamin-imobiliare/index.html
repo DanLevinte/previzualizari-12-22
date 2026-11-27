@@ -5,142 +5,423 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>BENIAMIN Imobiliare · Agenție imobiliară Craiova</title>
+<meta name="description" content="BENIAMIN Imobiliare, agenție imobiliară în Craiova, Bulevardul Tineretului 2C. Tel: 0734 615 500.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Martian+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F3F1EA;--g:#33332F;--line:#2C6E8F;--red:#BE3426;--faint:rgba(44,110,143,.16)}
+:root{--bg:#F8F6F1;--surface:#EEE8DD;--ink:#19202C;--muted:#5B6270;--line:#E0D8CA;--accent:#8A693D;--accent-ink:#fff;--accent-text:#7A5A30;--display:'Playfair Display',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--dw:500;--dls:-.015em;--img-r:0;--btn-r:0;--h1max:76px;--brand-size:24px;--brand-ls:.14em;--brand-w:600;--field:#fff;--panel:#19202C;--panel-ink:#F8F6F1;--panel-muted:#B9BFCA;--panel-line:#363F4E;--rev-bg:#19202C;--hero-pos:center 60%}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--paper);color:var(--g);font:300 15px/1.65 "Martian Mono",monospace;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+:root{--pad:clamp(20px,4vw,48px);--sec:clamp(72px,10vh,124px)}
+.eyebrow{font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent))}
+h1,h2,h3,.display{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:1.06;text-transform:var(--dtt,none)}
+h2{font-size:clamp(34px,4.2vw,var(--h2max,54px))}
+h3{font-size:var(--h3,25px);line-height:1.15}
+.lead{font-size:19px;color:var(--muted);max-width:52ch}
+svg.i{width:18px;height:18px;flex:none}
+.stars{color:var(--star,#B98B2E);letter-spacing:1px}
+.sec{padding:var(--sec) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,96px);align-items:end;margin-bottom:clamp(40px,6vh,64px)}
+.sec-head h2{margin-top:18px}
+.alt{background:var(--surface)}
 
-.sheet{margin:16px;border:2px solid var(--g);position:relative;padding:30px 30px 0;
-  background-image:linear-gradient(var(--faint) 1px,transparent 1px),linear-gradient(90deg,var(--faint) 1px,transparent 1px);background-size:40px 40px}
-/* drawing zones A-F / 1-4 */
-.zx{position:absolute;left:0;right:0;top:0;height:24px;display:flex;border-bottom:1px solid var(--g);background:var(--paper)}
-.zx span{flex:1;text-align:center;font-size:10px;line-height:24px;border-left:1px solid var(--g)}
-.zx span:first-child{border-left:0}
-.zy{position:absolute;top:24px;bottom:0;left:0;width:24px;display:flex;flex-direction:column;border-right:1px solid var(--g);background:var(--paper)}
-.zy span{flex:1;display:flex;align-items:center;justify-content:center;font-size:10px;border-top:1px solid var(--g)}
-.zy span:first-child{border-top:0}
-.inner{padding:30px 0 0 30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:var(--btn-r,4px);border:1px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--ink);color:var(--bg)}
+.btn-dark{background:var(--ink);color:var(--bg)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--accent);color:var(--accent-ink)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover,.btn-line:focus-visible{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-flex;align-items:center;gap:8px}
+.link:hover{color:var(--accent-text,var(--accent))}
 
-.top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:4vw;padding:7vh 0 8vh;align-items:center}
-h1{font-size:clamp(50px,7.4vw,118px);line-height:.92;letter-spacing:-.02em}
-h1 i{color:var(--red)}
-.hero p{max-width:40ch;margin-top:26px}
-.plan{width:100%;display:block;background:var(--paper)}
-.plan .w{fill:none;stroke:var(--g);stroke-width:6;stroke-linecap:square}
-.plan .t{fill:none;stroke:var(--g);stroke-width:1.4}
-.plan .d{stroke:var(--line);stroke-width:1;fill:none}
-.plan .door{fill:none;stroke:var(--g);stroke-width:1;stroke-dasharray:3 3}
-.plan text{font-family:"Martian Mono";font-size:11px;fill:var(--g);letter-spacing:.06em}
-.plan .dl{fill:var(--line);font-size:12px}
-.plan .you{fill:var(--red)}
+.util{background:var(--util-bg,var(--ink));color:var(--util-ink,#C9CFCB);font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:24px}
+.util span,.util a{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.util a:hover{color:#fff}
+.util .stars{color:#E2B65A}
 
-.notes{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:4vw;padding:7vh 0;border-top:1px solid var(--g)}
-.notes h2{font-size:clamp(34px,4vw,56px);line-height:1}
-.notes ol{list-style:none;counter-reset:n}
-.notes li{counter-increment:n;display:grid;grid-template-columns:52px 1fr;padding:16px 0;border-bottom:1px dashed var(--g)}
-.notes li::before{content:"N" counter(n);color:var(--line);font-weight:600}
-.notes li b{font:400 26px/1.15 "Instrument Serif";display:block;margin-bottom:4px}
+header.site{position:sticky;top:0;z-index:20;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));border-bottom:1px solid transparent;transition:border-color .2s}
+header.site.scrolled{border-color:var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand b{font:var(--brand-w,500) var(--brand-size,26px)/1 var(--brand-font,var(--display));letter-spacing:var(--brand-ls,.02em);text-transform:var(--brand-tt,none);white-space:nowrap}
+.brand small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--head-muted,var(--muted));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.main{display:flex;align-items:center;gap:32px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500}
+nav.main a:not(.btn):hover{color:var(--accent-text,var(--accent))}
+nav.main .btn{padding:13px 18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;flex:none}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .2s,opacity .2s}
 
-.contact{display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-end;padding:6vh 0 7vh;border-top:1px solid var(--g)}
-.contact .tel{font:400 clamp(44px,7vw,96px)/1 "Instrument Serif";text-decoration:none;border-bottom:2px solid var(--red)}
+/* hero: shared */
+.hero h1{font-size:clamp(42px,5.6vw,var(--h1max,78px));margin:20px 0 24px}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.proof div{display:flex;align-items:center;gap:12px}
+.proof strong{font:var(--dw) 30px/1 var(--display);color:var(--ink);letter-spacing:var(--dls)}
+.proof .stars{display:block;font-size:14px}
 
-/* title block (cartuș) */
-.cartus{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border:2px solid var(--g);border-bottom:0;margin-left:auto;max-width:820px;background:var(--paper);font-size:11px}
-.cartus div{padding:8px 10px;border-left:1px solid var(--g);border-bottom:1px solid var(--g)}
-.cartus .big{border-left:0}
-.cartus small{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
-.cartus .big{grid-row:span 2;font:400 26px/1.05 "Instrument Serif"}
-.cartus .big small{font-family:"Martian Mono"}
-.foot{font-size:11px;padding:14px 16px 30px;color:#555}
+.hero-split{padding:clamp(36px,6vh,80px) 0 var(--sec)}
+.hero-split .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-split.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.hero-split.rev figure{order:-1}
+.hero-split figure img{width:100%;aspect-ratio:var(--hero-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
 
-@media (max-width:820px){
-  .sheet{margin:8px;padding:20px 12px 0}
-  .zy{display:none}
-  .inner{padding:24px 0 0}
-  .hero,.notes{grid-template-columns:1fr}
-  .notes li{grid-template-columns:40px 1fr}
-  .cartus{grid-template-columns:1fr 1fr}
-  .cartus .big{grid-column:1/3;grid-row:auto}
-  .cartus div:nth-child(even){border-left:0}
+.hero-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(86vh,820px)}
+.hero-panel .txt{background:var(--panel);color:var(--panel-ink,var(--ink));display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,96px) clamp(24px,5vw,80px) clamp(48px,8vh,96px) max(var(--pad),calc((100vw - 1240px)/2 + var(--pad)))}
+.hero-panel .txt .lead{color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof{border-color:var(--panel-line,var(--line));color:var(--panel-muted,var(--muted))}
+.hero-panel .txt .proof strong{color:inherit}
+.hero-panel figure{position:relative;min-height:420px}
+.hero-panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center)}
+
+.hero-full{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos,center);z-index:-2}
+.hero-full::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim,linear-gradient(to top,rgba(10,12,14,.78) 0%,rgba(10,12,14,.35) 45%,rgba(10,12,14,.05) 75%))}
+.hero-full .wrap{width:100%;padding-bottom:clamp(40px,8vh,88px);padding-top:120px}
+.hero-full .inner{max-width:760px}
+.hero-full .eyebrow{color:#fff;opacity:.9}
+.hero-full .lead{color:rgba(255,255,255,.86)}
+.hero-full .proof{border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+.hero-full .proof strong{color:#fff}
+.hero-full .btn-line{color:#fff}
+.hero-full .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hero-full .link{color:#fff}
+
+.hero-stack{padding:clamp(40px,7vh,88px) 0 0}
+.hero-stack .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:end}
+.hero-stack h1{margin-bottom:0}
+.hero-stack .top .side .lead{margin-bottom:26px}
+.hero-stack .top .actions{margin-top:0}
+.hero-stack figure{margin-top:clamp(40px,6vh,72px)}
+.hero-stack figure img{width:100%;height:clamp(320px,62vh,640px);object-fit:cover;object-position:var(--hero-pos,center)}
+.hero-stack .proof{margin-top:28px}
+
+/* request form -> WhatsApp */
+.request{background:var(--bg);color:var(--ink);border-radius:var(--card-r,4px);padding:26px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 24px 48px -28px rgba(0,0,0,.45)}
+.request h3{font-size:24px;margin-bottom:6px}
+.request p.small{font-size:14px;color:var(--muted);margin-bottom:18px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--btn-r,4px);overflow:hidden;margin-bottom:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 4px;font:600 13px/1.2 var(--sans);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:checked+span{background:var(--ink);color:var(--bg)}
+.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:-3px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fields label{display:flex;flex-direction:column;gap:6px;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fields label.full{grid-column:1/3}
+.fields input,.fields textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--field,#fff);border:1px solid var(--line);border-radius:var(--btn-r,4px);padding:12px 12px;text-transform:none;letter-spacing:0;width:100%}
+.fields textarea{min-height:76px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.request .btn{width:100%}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.intro.rev .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.intro.rev figure{order:-1}
+.statement{font:var(--dw) clamp(26px,2.6vw,36px)/1.28 var(--display);letter-spacing:-.01em;margin-top:20px;text-transform:none}
+.statement em{font-style:normal;color:var(--accent-text,var(--accent))}
+.intro p.lead{margin-top:24px}
+.intro figure img{width:100%;aspect-ratio:var(--intro-ar,3/2);object-fit:cover;border-radius:var(--img-r,3px)}
+figcaption{font-size:13px;color:var(--muted);margin-top:12px}
+.facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{font:600 12px/1.6 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.svc-rows{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(32px,5vw,72px);counter-reset:t}
+.svc-rows li{counter-increment:t;display:grid;grid-template-columns:48px 1fr;gap:4px 8px;padding:26px 0;border-top:1px solid var(--line-strong,var(--line))}
+.svc-rows li::before{content:counter(t,decimal-leading-zero);font:500 14px/1.9 var(--sans);color:var(--accent-text,var(--accent))}
+.svc-rows h3,.svc-rows p{grid-column:2}
+.svc-rows p,.svc-cards p,.svc-list p{color:var(--muted);font-size:16px;max-width:46ch;margin-top:6px}
+.svc-cards{list-style:none;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.svc-cards li{background:var(--card,var(--bg));border-radius:var(--card-r,4px);padding:30px 28px 32px;border-top:3px solid var(--accent)}
+.svc-cards h3{font-size:23px}
+.svc-list{list-style:none;border-top:1px solid var(--ink)}
+.svc-list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--line-strong,var(--line));align-items:baseline}
+.svc-list h3{font-size:clamp(24px,2.4vw,32px)}
+.svc-list p{margin-top:0}
+.svc-note{margin-top:32px;font-size:15px;color:var(--muted)}
+
+.photo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.photo-cards article img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--img-r,3px)}
+.photo-cards h3{margin-top:22px}
+.photo-cards p{color:var(--muted);font-size:16px;margin-top:8px;max-width:40ch}
+.photo-cards .link{margin-top:16px;font-size:15px}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.split2 article{background:var(--card,var(--bg));border-radius:var(--card-r,4px);overflow:hidden;display:flex;flex-direction:column}
+.split2 article img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.split2 .body{padding:clamp(24px,3vw,40px)}
+.split2 h3{font-size:clamp(28px,3vw,38px)}
+.split2 p{color:var(--muted);margin-top:12px}
+.split2 ul{list-style:none;margin-top:18px}
+.split2 li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.split2 li::before{content:"";position:absolute;left:2px;top:19px;width:10px;height:2px;background:var(--accent)}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+.checks li{padding:20px 0 20px 40px;border-top:1px solid var(--line-strong,var(--line));position:relative;font-size:18px}
+.checks li::before{content:"";position:absolute;left:0;top:22px;width:22px;height:22px;border-radius:50%;background:var(--accent-soft,var(--surface))}
+.checks li::after{content:"";position:absolute;left:8px;top:27px;width:5px;height:9px;border:solid var(--accent-text,var(--accent));border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+.band img{width:100%;height:clamp(300px,58vh,620px);object-fit:cover;object-position:var(--band-pos,center)}
+.gallery{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px)}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--img-r,3px)}
+.gallery .g1{grid-row:1/3;min-height:520px}
+.gallery .g2,.gallery .g3{aspect-ratio:4/3}
+
+.steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);counter-reset:s}
+.steps .step{counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps .step::before{content:var(--step-label,"Pasul ") counter(s);display:block;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,var(--accent));margin-bottom:18px}
+.steps h3{font-size:27px;margin-bottom:12px}
+.steps p{color:var(--muted);font-size:16px}
+
+.reviews{background:var(--rev-bg,var(--accent));color:var(--rev-ink,#fff)}
+.reviews .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(70px,10vh,110px);padding-bottom:clamp(70px,10vh,110px)}
+.reviews .eyebrow{color:inherit;opacity:.75}
+.reviews.solo .wrap{grid-template-columns:1fr}
+.reviews.solo .wrap>div{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,6vw,96px);align-items:end}
+.reviews.solo .eyebrow{grid-column:1/3}
+.reviews.solo .score{grid-row:2/4;margin-bottom:0}
+.reviews.solo p,.reviews.solo .btn{grid-column:2;justify-self:start}
+.reviews .score{display:flex;align-items:flex-end;gap:24px;margin:20px 0 24px;flex-wrap:wrap}
+.reviews .score b{font:var(--dw) clamp(96px,12vw,160px)/.8 var(--display);letter-spacing:-.04em}
+.reviews .score span{font-size:15px;line-height:1.5;opacity:.85;padding-bottom:10px}
+.reviews .score .stars{display:block;color:#F0C766;font-size:20px;letter-spacing:3px;opacity:1}
+.reviews p{opacity:.88;max-width:46ch;margin-bottom:30px}
+.reviews .btn-line:hover{background:var(--rev-ink,#fff);color:var(--rev-bg,var(--accent));border-color:var(--rev-ink,#fff)}
+.reviews img{width:100%;aspect-ratio:var(--rev-ar,4/5);object-fit:cover;border-radius:var(--img-r,3px)}
+
+.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.faq h2{margin-top:18px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font:var(--dw) 22px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);text-transform:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
+summary:hover{color:var(--accent-text,var(--accent))}
+details p{padding:0 40px 26px 0;color:var(--muted);max-width:60ch}
+
+.cta-strip{background:var(--cta-bg,var(--ink));color:var(--cta-ink,var(--bg))}
+.cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.cta-strip h2{font-size:clamp(30px,3.4vw,44px);max-width:22ch}
+.cta-strip .actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta-strip .btn-line:hover{background:var(--cta-ink,var(--bg));color:var(--cta-bg,var(--ink))}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px)}
+.contact h2{margin-top:18px}
+.contact dl{margin-top:34px}
+.contact dt{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact dd{font:var(--dw) 23px/1.3 var(--display);letter-spacing:var(--dls-s,-.01em);margin-bottom:26px;text-transform:none}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+.contact dd a:hover{border-color:var(--ink)}
+.contact .actions{display:flex;flex-wrap:wrap;gap:12px}
+.map{min-height:440px;border-radius:var(--img-r,3px);overflow:hidden;background:var(--line)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(.3)}
+
+footer.site{background:var(--foot-bg,var(--ink));color:var(--foot-muted,#B7BEBA);font-size:14px;padding:56px 0 40px}
+footer.site .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand b{color:#F5F3EE}
+footer.site .brand small{color:rgba(255,255,255,.55)}
+footer.site .cols{display:flex;gap:56px;flex-wrap:wrap}
+footer.site .cols a{display:block;text-decoration:none;color:rgba(255,255,255,.92);margin-top:6px}
+footer.site .cols a:hover{text-decoration:underline}
+footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.5)}
+
+.mbar{display:none}
+
+@media (max-width:960px){
+  .util .hide-s{display:none}
+  nav.main{position:fixed;left:0;right:0;top:116px;background:var(--head-bg,var(--bg));color:var(--head-ink,var(--ink));flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100vh - 80px);overflow:auto}
+  nav.main a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
+  nav.main .btn{margin-top:18px;border-bottom:0}
+  body.menu nav.main{transform:none;opacity:1;visibility:visible}
+  body.menu .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu .burger span:nth-child(2){opacity:0}
+  body.menu .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .burger{display:block}
+  .hero-split .wrap,.hero-split.rev .wrap,.hero-stack .top,.sec-head,.intro .wrap,.intro.rev .wrap,.reviews .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-split figure,.intro.rev figure{order:-1}
+  .hero-split figure img{aspect-ratio:4/3}
+  .hero-panel{grid-template-columns:1fr;min-height:0}
+  .hero-panel figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero-panel .txt{padding:40px var(--pad) 48px}
+  .hero-full{min-height:min(92vh,760px)}
+  .svc-rows,.checks{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr 1fr}
+  .svc-list li{grid-template-columns:1fr;gap:6px}
+  .photo-cards{grid-template-columns:1fr}
+  .split2{grid-template-columns:1fr}
+  .steps .grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/3;grid-row:auto;min-height:0;aspect-ratio:4/3}
+  .reviews img{aspect-ratio:16/10}
+  .reviews.solo .wrap>div{grid-template-columns:1fr}
+  .reviews.solo .eyebrow,.reviews.solo p,.reviews.solo .btn{grid-column:1}
+  .reviews.solo .score{grid-row:auto;margin-bottom:24px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{padding:14px 10px}
+  .mbar .btn-line{color:var(--ink)}
+  body{padding-bottom:76px}
 }
+@media (max-width:600px){
+  .hero-full{display:block;min-height:0;background:var(--hero-m-bg,var(--ink))}
+  .hero-full>img{position:static;height:auto;aspect-ratio:4/3}
+  .hero-full::before{display:none}
+  .hero-full .wrap{padding-top:34px;padding-bottom:44px}
+  .util .wrap{justify-content:center}
+  .util .hide-xs{display:none}
+  .svc-cards{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .fields label.full{grid-column:auto}
+  .seg{grid-template-columns:1fr 1fr}
+  .seg label:nth-child(3) span{border-left:0}
+  .seg label:nth-child(n+3) span{border-top:1px solid var(--line)}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .map,.map iframe{min-height:320px}
+  .brand b{font-size:min(var(--brand-size,26px),23px)}
+  .request{padding:20px}
+}
+
+.hero-panel .txt .eyebrow{color:#CDAE7E}.hero-panel .link{color:#F8F6F1}.hero-panel .btn-primary:hover{background:#F8F6F1;color:#19202C}.reviews .eyebrow{color:#CDAE7E;opacity:1}
 </style>
 </head>
 <body>
-<div class="sheet">
-  <div class="zx" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
-  <div class="zy" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span></div>
-  <div class="inner">
-    <div class="top"><span>BENIAMIN Imobiliare · Craiova</span><a href="tel:+40734615500">0734 615 500</a></div>
+<div class="util"><div class="wrap">
+  <span class="hide-s"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bd. Tineretului 2C, Craiova</span>
+  <span class="hide-xs"><span class="stars" aria-hidden="true">★★★★★</span>5,0 pe Google · 127 de recenzii</span>
+  <a href="tel:+40734615500"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>0734 615 500</a>
+</div></div>
+<header class="site" id="top"><div class="wrap">
+  <a class="brand" href="#top"><b>BENIAMIN</b><small>Imobiliare · Craiova</small></a>
+  <nav class="main" id="nav" aria-label="Meniu principal"><a href="#servicii">Servicii</a><a href="#cerere">Cerere rapidă</a><a href="#intrebari">Întrebări</a><a href="#contact">Contact</a><a class="btn btn-primary" href="tel:+40734615500">Sună agenția</a></nav>
+  <button class="burger" aria-label="Deschide meniul" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main>
 
-    <main>
-      <div class="hero">
-        <div>
-          <h1 class="serif">Fiecare casă are un plan. <i>Începem cu al tău.</i></h1>
-          <p>Agenție imobiliară în Craiova, pe Bulevardul Tineretului. Vânzări, cumpărări și închirieri — cu cineva care se uită la detalii înainte să te uiți tu.</p>
-        </div>
-        <svg class="plan" viewBox="0 0 520 380" role="img" aria-label="Plan schematic al unui apartament, desenat ca o planșă de arhitectură">
-          <!-- outer walls -->
-          <path class="w" d="M40 40H480V340H40Z"/>
-          <!-- inner walls -->
-          <path class="t" d="M250 40V200M250 250V340M40 200H130M180 200H330M380 200H480M380 40V150"/>
-          <path class="door" d="M130 200A50 50 0 0 1 180 150M330 200A50 50 0 0 0 380 250"/>
-          <!-- windows -->
-          <g stroke="#2C6E8F" stroke-width="3"><path d="M100 40H190M300 40H350M480 90V150M480 250V310M120 340H200"/></g>
-          <!-- labels -->
-          <text x="80" y="120">CAMERĂ</text>
-          <text x="280" y="120">BUCĂTĂRIE</text>
-          <text x="400" y="100">BAIE</text>
-          <text x="90" y="280">DORMITOR</text>
-          <text x="300" y="300">LIVING</text>
-          <!-- dimension lines -->
-          <g class="d"><path d="M40 16H480M40 10V22M480 10V22"/><path d="M504 40V340M498 40H510M498 340H510"/></g>
-          <text class="dl" x="254" y="12" text-anchor="middle">A</text>
-          <text class="dl" x="516" y="196">B</text>
-          <!-- you are here -->
-          <circle class="you" cx="300" cy="230" r="7"/>
-          <text x="314" y="234" style="fill:#BE3426">TU, AICI</text>
-          <text x="40" y="372" style="font-size:10px">PLAN SCHEMATIC · FĂRĂ SCARĂ</text>
-        </svg>
-      </div>
-
-      <section class="notes">
-        <h2 class="serif">Note pe planșă</h2>
-        <ol>
-          <li><div><b>Vinzi?</b>Spune adresa, suprafața și când se poate face o vizionare. Pornim de acolo.</div></li>
-          <li><div><b>Cumperi?</b>Cartierul, bugetul, câte camere. Cu cât planul e mai clar, cu atât vizionările sunt mai puține și mai bune.</div></li>
-          <li><div><b>Închiriezi?</b>Ca proprietar sau ca chiriaș — perioada și data de la care. Restul se discută la telefon.</div></li>
-          <li><div><b>Verificat de alții.</b>Nota 5,0 pe Google Maps, din 127 de recenzii publice.</div></li>
-        </ol>
-      </section>
-
-      <section class="contact">
-        <div>
-          <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Telefon</p>
-          <a class="tel" href="tel:+40734615500">0734 615 500</a>
-        </div>
-        <p><a href="https://wa.me/40734615500">WhatsApp →</a><br>
-        Bulevardul Tineretului 2C, 200519 Craiova<br>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=BENIAMIN%20Imobiliare%2C%20Bulevardul%20Tineretului%202C%2C%20200519%20Craiova">deschide harta →</a></p>
-      </section>
-    </main>
+<section class="hero hero-panel">
+  <div class="txt">
+    <p class="eyebrow">Agenție imobiliară · Craiova</p>
+    <h1>Imobiliare în Craiova, cu atenție la fiecare detaliu.</h1>
+    <p class="lead">BENIAMIN Imobiliare te ajută să vinzi, să cumperi sau să închiriezi o locuință. Sediul este pe Bulevardul Tineretului 2C.</p>
+    <div class="actions"><a class="btn btn-primary" href="tel:+40734615500"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună: 0734 615 500</a><a class="link" href="https://wa.me/40734615500"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Scrie pe WhatsApp</a></div>
+    <div class="proof"><div><strong>5,0</strong><span><span class="stars" aria-hidden="true">★★★★★</span>127 de recenzii pe Google</span></div></div>
   </div>
+  <figure><img src="img/hero.jpg" width="2000" height="1230" alt="Living cald și luminos, cu canapea și perdele albe"></figure>
+</section>
 
-  <footer class="cartus" aria-label="Cartuș">
-    <div class="big"><small>Beneficiar</small>Tu și familia ta</div>
-    <div><small>Executant</small>BENIAMIN Imobiliare</div>
-    <div><small>Localitate</small>Craiova</div>
-    <div><small>Planșa</small>01 / 01</div>
-    <div><small>Adresă</small>Bd. Tineretului 2C</div>
-    <div><small>Scara</small>1:1</div>
-    <div><small>Telefon</small>0734 615 500</div>
-  </footer>
-</div>
-<p class="foot">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</p>
+<section class="sec" id="servicii">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Servicii</p><h2>Ce rezolvăm pentru tine</h2></div><p class=lead>Fiecare colaborare începe cu o discuție, fără obligații.</p></div>
+    <ul class="svc-list">
+      <li><h3>Vânzare</h3><p>Evaluăm proprietatea, stabilim un preț corect și organizăm vizionările.</p></li>
+      <li><h3>Cumpărare</h3><p>Căutăm în funcție de cartier, buget și ce contează pentru tine.</p></li>
+      <li><h3>Închiriere</h3><p>Pentru proprietari și pentru cei care caută o locuință în Craiova.</p></li>
+      <li><h3>Consultanță</h3><p>Ai o întrebare despre o tranzacție? Sună și află ce variante ai.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec alt intro" id="cerere">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Cerere rapidă</p>
+      <h2 style="margin:18px 0 24px">Spune-ne ce cauți</h2>
+      <form class="request" id="req" data-wa="40734615500" onsubmit="return false" aria-labelledby="req-t">
+  <h3 id="req-t">Mesaj către agenție</h3>
+  <p class="small">Se deschide WhatsApp cu mesajul gata scris. Tu doar apeși „Trimite”.</p>
+  <div class="seg" role="radiogroup" aria-label="Ce vrei să faci">
+    <label><input type="radio" name="t" value="Vreau să vând" checked><span>Vând</span></label>
+    <label><input type="radio" name="t" value="Vreau să cumpăr"><span>Cumpăr</span></label>
+    <label><input type="radio" name="t" value="Vreau să închiriez o proprietate"><span>Dau în chirie</span></label>
+    <label><input type="radio" name="t" value="Caut o chirie"><span>Caut chirie</span></label>
+  </div>
+  <div class="fields">
+    <label>Tip proprietate<input id="rq-tip" type="text" placeholder="ex. apartament 2 camere" maxlength="60"></label>
+    <label>Zona<input id="rq-zona" type="text" placeholder="cartier sau stradă" maxlength="60"></label>
+    <label class="full">Buget sau preț dorit<input id="rq-buget" type="text" placeholder="opțional" maxlength="40"></label>
+    <label class="full">Detalii<textarea id="rq-msg" placeholder="etaj, suprafață, de când e disponibil…" maxlength="400"></textarea></label>
+  </div>
+  <a class="btn btn-primary" id="req-send" href="https://wa.me/40734615500"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Trimite pe WhatsApp</a>
+</form>
+    </div>
+    <figure style="--intro-ar:4/5"><img src="img/parc.jpg" width="1200" height="1600" loading="lazy" alt="Pod suspendat într-un parc din Craiova, toamna"></figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="gallery">
+      <img src="img/living.jpg" width="1400" height="788" loading="lazy" class="g1" alt="Living cu canapea albă și masă rotundă din lemn">
+      <img src="img/camera.jpg" width="1200" height="1800" loading="lazy" alt="Cameră de zi cu canapea gri și ferestre mari">
+      <img src="img/usa.jpg" width="1200" height="1500" loading="lazy" alt="Cheie în broasca unei uși">
+    </div>
+  </div>
+</section>
+
+<section class="reviews"><div class="wrap">
+  <div><p class="eyebrow">Recenzii</p>
+    <div class="score"><b>5,0</b><span><span class="stars" aria-hidden="true">★★★★★</span>din 127 de recenzii<br>pe Google Maps</span></div>
+    <p>Nota medie din cele 127 de recenzii publice lăsate pe Google Maps.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=BENIAMIN%20Imobiliare%20-%20Agentie%20Imobiliara%20Craiova%2C%20Bulevardul%20Tineretului%202C%2C%20200519%20Craiova">Citește recenziile pe Google</a></div>
+  <img src="img/chei.jpg" width="1200" height="800" loading="lazy" alt="Mână care ține cheia unei locuințe">
+</div></section>
+
+<div id="intrebari"></div>
+<section class="sec faq"><div class="wrap"><div><p class="eyebrow">Întrebări frecvente</p><h2>Răspunsuri scurte</h2></div><div><details open><summary>Cât costă serviciile agenției?</summary><p>Comisionul și condițiile le afli direct de la agenție, la telefon sau pe WhatsApp.</p></details><details><summary>Cât durează să vând un apartament?</summary><p>Depinde de proprietate și de preț. La prima discuție primești o estimare sinceră.</p></details><details><summary>Lucrați și cu chirii?</summary><p>Da, atât cu proprietari, cât și cu oameni care caută o locuință.</p></details><details><summary>Unde e sediul?</summary><p>Pe Bulevardul Tineretului 2C, în Craiova.</p></details></div></div></section>
+
+<section class="sec alt contact" id="contact"><div class="wrap">
+  <div><p class="eyebrow">Contact</p><h2>Hai să vorbim</h2>
+    <dl><dt>Telefon</dt><dd><a href="tel:+40734615500">0734 615 500</a></dd><dt>WhatsApp</dt><dd><a href="https://wa.me/40734615500">Trimite un mesaj</a></dd><dt>Adresă</dt><dd>Bulevardul Tineretului 2C<br>200519 Craiova</dd></dl>
+    <div class="actions"><a class="btn btn-dark" href="tel:+40734615500"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună acum</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bulevardul%20Tineretului%202C%2C%20200519%20Craiova">Indicații de drum</a></div>
+  </div>
+  <div class="map"><iframe title="Hartă: Bd. Tineretului 2C, Craiova" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bulevardul%20Tineretului%202C%2C%20200519%20Craiova&amp;z=16&amp;output=embed"></iframe></div>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+  <div class="top">
+    <div class="brand"><b>BENIAMIN</b><small>Imobiliare · Craiova</small></div>
+    <div class="cols">
+      <div>Adresă<a href="https://www.google.com/maps/search/?api=1&amp;query=BENIAMIN%20Imobiliare%20-%20Agentie%20Imobiliara%20Craiova%2C%20Bulevardul%20Tineretului%202C%2C%20200519%20Craiova">Bd. Tineretului 2C, Craiova</a></div>
+      <div>Contact<a href="tel:+40734615500">0734 615 500</a><a href="https://wa.me/40734615500">WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="fine"><span>© BENIAMIN Imobiliare - Agenție Imobiliară Craiova</span><span>Previzualizare de site, neoficială · Fotografii: Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-primary" href="tel:+40734615500"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h3.5l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L20 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Sună</a><a class="btn btn-line" href="https://wa.me/40734615500"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a></div>
+<script>
+(function(){
+  var h=document.querySelector('header.site'),b=document.querySelector('.burger'),n=document.getElementById('nav');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function close(){document.body.classList.remove('menu');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul')}
+  b.addEventListener('click',function(){n.style.top=h.getBoundingClientRect().bottom+'px';var o=document.body.classList.toggle('menu');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var f=document.getElementById('req');
+  if(f){
+    var send=document.getElementById('req-send'),num=f.getAttribute('data-wa');
+    function v(id){var e=document.getElementById(id);return e?e.value.trim():''}
+    function upd(){
+      var t=f.querySelector('input[name=t]:checked').value,parts=['Bună ziua! '+t+'.'];
+      if(v('rq-tip'))parts.push('Proprietate: '+v('rq-tip')+'.');
+      if(v('rq-zona'))parts.push('Zona: '+v('rq-zona')+'.');
+      if(v('rq-buget'))parts.push('Buget / preț: '+v('rq-buget')+'.');
+      if(v('rq-msg'))parts.push(v('rq-msg'));
+      send.href='https://wa.me/'+num+'?text='+encodeURIComponent(parts.join(' '));
+    }
+    f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+  }
+})();
+</script>
 </body>
 </html>
