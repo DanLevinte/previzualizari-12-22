@@ -292,7 +292,7 @@ footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
   .request{padding:20px}
 }
 
-@media (max-width:960px){.hero-full{--scrim:linear-gradient(to top,rgba(14,14,14,.92) 0%,rgba(14,14,14,.7) 60%,rgba(14,14,14,.35) 100%)}}h1,h2,h3,.brand b,.reviews .score b{font-stretch:78%}summary,.statement,.contact dd{text-transform:none;font-weight:600;font-stretch:100%}.statement{font-weight:700}
+.hero-full>.ba{position:absolute;inset:0;z-index:-2;overflow:hidden}.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ba .b1{object-position:center 60%}.ba .b2{object-position:center 55%;opacity:0}.ba-tag{position:absolute;right:var(--pad);top:28px;z-index:2;background:rgba(14,14,14,.72);color:#fff;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;border-left:3px solid var(--accent)}.ba .t2{opacity:0}@media (prefers-reduced-motion:no-preference){.ba .b2,.ba .t2{animation:baIn 16s ease-in-out infinite}.ba .t1{animation:baOut 16s ease-in-out infinite}.ba img{animation-name:baIn,kb;animation-duration:16s,32s;animation-iteration-count:infinite;animation-direction:normal,alternate;animation-timing-function:ease-in-out,linear}.ba .b1{animation:kb 32s linear infinite alternate}}@keyframes baIn{0%,28%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}@keyframes baOut{0%,28%{opacity:1}38%,92%{opacity:0}100%{opacity:1}}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.06)}}@media (prefers-reduced-motion:reduce){.ba .b2,.ba .t2{opacity:1}.ba .t1{opacity:0}}@media (max-width:600px){.hero-full>.ba{position:relative;inset:auto;aspect-ratio:4/3;z-index:0}.ba-tag{top:auto;bottom:14px;right:14px}}@media (max-width:960px){.hero-full{--scrim:linear-gradient(to top,rgba(14,14,14,.92) 0%,rgba(14,14,14,.7) 60%,rgba(14,14,14,.35) 100%)}}h1,h2,h3,.brand b,.reviews .score b{font-stretch:78%}summary,.statement,.contact dd{text-transform:none;font-weight:600;font-stretch:100%}.statement{font-weight:700}
 </style>
 </head>
 <body>
@@ -309,7 +309,11 @@ footer.site .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 <main>
 
 <section class="hero hero-full">
-  <img src="img/hero.jpg" width="1800" height="1350" alt="Casă în construcție, cu schele și pereți de bolțari">
+  <div class="ba">
+    <img src="img/inainte.jpg" width="1800" height="1386" class="b1" alt="Casă modernă din beton, în construcție">
+    <img src="img/dupa.jpg" width="1800" height="1400" class="b2" alt="Casă modernă finalizată, luminată seara">
+    <span class="ba-tag t1">Șantier</span><span class="ba-tag t2">Casă finalizată</span>
+  </div>
   <div class="wrap"><div class="inner">
     <p class="eyebrow">Constructor de locuințe · Brașov</p>
     <h1>Construim case în Brașov, de la fundație la acoperiș.</h1>
