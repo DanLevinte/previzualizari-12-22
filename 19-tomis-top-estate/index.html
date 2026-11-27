@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tomis Top Estate · Agenție imobiliară · Constanța</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--news:#EDE8DC;--ink:#1B1B1B;--red:#B5271B;--gray:#5a564d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--news);color:var(--ink);font:400 16px/1.45 "Old Standard TT",Georgia,serif;overflow-x:hidden}
+a{color:inherit}
+.n{font-family:"Archivo Narrow",sans-serif}
+.page{max-width:1240px;margin:0 auto;padding:18px 3vw 40px}
+
+.ear{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:600 12px/1.3 "Archivo Narrow";letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.mast{text-align:left;padding:14px 0 6px;border-bottom:4px double var(--ink);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mast h1{font:700 clamp(46px,9.5vw,132px)/.85 "Old Standard TT";letter-spacing:-.025em}
+.mast h1 i{font-weight:400;color:var(--red)}
+.mast .box{border:1px solid var(--ink);padding:8px 12px;font:600 13px/1.3 "Archivo Narrow";text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;max-width:220px}
+.mast .box b{display:block;font:700 34px/1 "Old Standard TT";letter-spacing:0}
+.dateline{display:flex;gap:18px;flex-wrap:wrap;font:600 13px/1 "Archivo Narrow";text-transform:uppercase;letter-spacing:.08em;padding:8px 0;border-bottom:1px solid var(--ink)}
+.dateline span+span::before{content:"■";margin-right:18px;color:var(--red);font-size:9px;vertical-align:2px}
+
+.cols{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr) minmax(0,1fr);gap:0;margin-top:18px}
+.cols>*{padding:0 18px;border-left:1px solid var(--ink)}
+.cols>*:first-child{border-left:0;padding-left:0}
+.cols>*:last-child{padding-right:0}
+.lead h2{font:700 clamp(32px,4vw,54px)/.98 "Old Standard TT";letter-spacing:-.02em;margin-bottom:12px}
+.lead .deck{font:italic 400 21px/1.3 "Old Standard TT";margin-bottom:16px;color:var(--gray)}
+.lead .body{columns:2;column-gap:22px;column-rule:1px solid rgba(0,0,0,.25);text-align:justify;hyphens:auto}
+.lead .body p{margin-bottom:.7em}
+.lead .body p:first-child::first-letter{float:left;font:700 64px/.8 "Old Standard TT";margin:4px 6px 0 0;color:var(--red)}
+
+.rubric{font:700 13px/1 "Archivo Narrow";letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--news);padding:6px 8px;margin-bottom:10px}
+.ad{border-bottom:1px solid rgba(0,0,0,.35);padding:8px 0 10px;font-size:15px}
+.ad b{font-family:"Archivo Narrow";text-transform:uppercase;letter-spacing:.04em}
+
+/* composer */
+.compose{margin-top:28px;border:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.compose .f{padding:20px;border-right:2px solid var(--ink)}
+.compose h2{font:700 30px/1 "Old Standard TT";margin-bottom:6px}
+.compose label{display:block;font:600 12px/1 "Archivo Narrow";letter-spacing:.12em;text-transform:uppercase;margin:16px 0 6px}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--ink)}
+.seg label{margin:0;flex:1 1 25%;text-align:center;cursor:pointer;border-left:1px solid var(--ink)}
+.seg label:first-child{border-left:0}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;padding:10px 4px;font:700 13px/1 "Archivo Narrow";letter-spacing:.06em}
+.seg input:checked+span{background:var(--ink);color:var(--news)}
+.seg input:focus-visible+span{outline:2px solid var(--red);outline-offset:-4px}
+.compose input[type=text],.compose textarea{width:100%;font:400 16px/1.4 "Old Standard TT";background:transparent;border:0;border-bottom:1px solid var(--ink);padding:6px 0;color:var(--ink)}
+.compose textarea{resize:vertical;min-height:70px}
+.compose input:focus,.compose textarea:focus{outline:none;border-bottom:2px solid var(--red)}
+.preview{padding:20px;background:#E2DCCD;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.clip{background:var(--news);border:1px solid var(--ink);padding:14px 16px;font-size:16px;transform:rotate(-.8deg);box-shadow:3px 3px 0 var(--ink)}
+.clip b{font-family:"Archivo Narrow";text-transform:uppercase}
+.send{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font:700 16px/1 "Archivo Narrow";letter-spacing:.1em;text-transform:uppercase;padding:16px}
+.send:hover,.send:focus-visible{background:var(--ink)}
+
+.bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);border-top:4px double var(--ink);margin-top:30px;padding-top:12px;gap:18px;font-size:15px}
+.bottom h3{font:700 13px/1 "Archivo Narrow";letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.bottom .tel{font:700 30px/1.1 "Old Standard TT";text-decoration:none}
+.fine{font-size:12px;color:var(--gray);margin-top:24px}
+
+@media (max-width:900px){
+  .cols{grid-template-columns:1fr 1fr}
+  .lead{grid-column:1/3;border-left:0;padding:0 0 20px !important;border-bottom:1px solid var(--ink);margin-bottom:18px}
+  .cols>*:nth-child(2){border-left:0;padding-left:0}
+}
+@media (max-width:620px){
+  .cols,.compose,.bottom{grid-template-columns:1fr}
+  .lead{grid-column:1}
+  .cols>*{border-left:0;padding:0 0 14px !important}
+  .lead .body{columns:1;text-align:left}
+  .compose .f{border-right:0;border-bottom:2px solid var(--ink)}
+  .seg label{flex-basis:50%}
+  .seg label:nth-child(3){border-left:0}
+  .seg label:nth-child(n+3){border-top:1px solid var(--ink)}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="ear"><span>Constanța · Strada Adam Ion 24A</span><span><a href="tel:+40753822539">Tel. 0753 822 539</a></span></div>
+  <header class="mast">
+    <h1>Tomis <i>Top</i> Estate</h1>
+    <div class="box">Nota pe Google Maps<b>5,0</b>din 470 de recenzii</div>
+  </header>
+  <div class="dateline"><span>Agenție imobiliară</span><span>Vânzări</span><span>Cumpărări</span><span>Închirieri</span></div>
+
+  <main>
+    <div class="cols">
+      <article class="lead">
+        <h2>Anunțul tău, citit de cineva care cunoaște Constanța.</h2>
+        <p class="deck">Portalurile au mii de anunțuri. Aici ai un om care răspunde la telefon.</p>
+        <div class="body">
+          <p>Fie că vinzi apartamentul bunicilor, cauți primul tău cămin sau vrei să închiriezi pe termen lung, totul începe cu o discuție. Spui ce ai sau ce cauți, iar agenția îți spune sincer ce se poate.</p>
+          <p>Tomis Top Estate lucrează din Strada Adam Ion 24A. Cei 470 de oameni care au lăsat o recenzie pe Google au dat, în medie, nota 5,0 — lucru rar pentru o agenție imobiliară.</p>
+          <p>Cel mai simplu mod de a începe e mai jos: scrie-ți anunțul ca în ziar și trimite-l direct pe WhatsApp.</p>
+        </div>
+      </article>
+      <aside>
+        <div class="rubric">Mica publicitate</div>
+        <div class="ad"><b>Vând.</b> Ai o proprietate în Constanța? Spune zona, numărul de camere și când poate fi vizitată.</div>
+        <div class="ad"><b>Cumpăr.</b> Spune bugetul și cartierul. Primești doar ce se potrivește.</div>
+      </aside>
+      <aside>
+        <div class="rubric">Rubrica chirii</div>
+        <div class="ad"><b>Închiriez.</b> Proprietari care vor chiriași serioși, fără zeci de telefoane.</div>
+        <div class="ad"><b>Caut chirie.</b> De la ce dată, pentru câte persoane, ce buget.</div>
+      </aside>
+    </div>
+
+    <section class="compose" aria-labelledby="ch">
+      <form class="f" id="f" onsubmit="return false">
+        <h2 id="ch">Scrie-ți anunțul</h2>
+        <p class="n" style="font-size:14px;color:var(--gray)">Nu se publică nicăieri. Se trimite doar agenției, pe WhatsApp.</p>
+        <label id="tl">Tip</label>
+        <div class="seg" role="radiogroup" aria-labelledby="tl">
+          <label><input type="radio" name="t" value="Vând" checked><span>VÂND</span></label>
+          <label><input type="radio" name="t" value="Cumpăr"><span>CUMPĂR</span></label>
+          <label><input type="radio" name="t" value="Închiriez"><span>ÎNCHIRIEZ</span></label>
+          <label><input type="radio" name="t" value="Caut chirie"><span>CAUT CHIRIE</span></label>
+        </div>
+        <label for="p">Ce fel de proprietate</label>
+        <input type="text" id="p" placeholder="apartament 2 camere" maxlength="60">
+        <label for="z">Zona</label>
+        <input type="text" id="z" placeholder="Tomis Nord" maxlength="60">
+        <label for="d">Detalii</label>
+        <textarea id="d" placeholder="etaj, buget, de când…" maxlength="300"></textarea>
+      </form>
+      <div class="preview">
+        <div>
+          <div class="rubric" style="display:inline-block">Așa va arăta</div>
+          <p class="clip" id="out" aria-live="polite"></p>
+        </div>
+        <a class="send" id="send" href="https://wa.me/40753822539">Trimite pe WhatsApp →</a>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div><h3>Telefon</h3><a class="tel" href="tel:+40753822539">0753 822 539</a></div>
+      <div><h3>Sediu</h3>Strada Adam Ion 24A<br>900178 Constanța<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Tomis%20Top%20Estate%2C%20Strada%20Adam%20Ion%2024A%2C%20900178%20Constan%C8%9Ba">vezi pe hartă</a></div>
+      <div><h3>WhatsApp</h3><a href="https://wa.me/40753822539">wa.me/40753822539</a></div>
+    </section>
+  </main>
+  <p class="fine n">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</p>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('f'),out=document.getElementById('out'),send=document.getElementById('send');
+  function v(id,def){var x=document.getElementById(id).value.trim();return x||def}
+  function upd(){
+    var t=f.querySelector('input[name=t]:checked').value;
+    var txt=t+' '+v('p','apartament 2 camere')+', zona '+v('z','Tomis Nord')+'. '+v('d','Detalii la telefon.');
+    out.innerHTML='';var b=document.createElement('b');b.textContent=t+'.';out.appendChild(b);
+    out.appendChild(document.createTextNode(' '+txt.slice(t.length+1)));
+    send.href='https://wa.me/40753822539?text='+encodeURIComponent('Bună ziua! Anunț de pe site: '+txt);
+  }
+  f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+})();
+</script>
+</body>
+</html>

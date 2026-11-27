@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>KINESTART · Recuperare copii și gravide · Constanța</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,100&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4EFE4;--ink:#1F2A44;--tomato:#D2461F;--mustard:#F2B035;--ruler:44px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.55 Rubik,system-ui,sans-serif;padding-left:var(--ruler);overflow-x:hidden}
+a{color:inherit}
+h1,h2,.big{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:800;letter-spacing:-.02em}
+
+/* growth-chart ruler = navigation */
+.ruler{position:fixed;left:0;top:0;bottom:0;width:var(--ruler);background:var(--mustard);border-right:2px solid var(--ink);z-index:5;
+  background-image:repeating-linear-gradient(to bottom,var(--ink) 0 2px,transparent 2px 12px),repeating-linear-gradient(to bottom,var(--ink) 0 2px,transparent 2px 60px);
+  background-size:10px 100%,22px 100%;background-repeat:repeat-y;background-position:right top,right top}
+.ruler ol{list-style:none;position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-around;padding:80px 0}
+.ruler a{display:block;writing-mode:vertical-rl;transform:rotate(180deg);text-decoration:none;font:700 12px/1 Rubik;letter-spacing:.14em;text-transform:uppercase;padding:8px 6px 8px 4px;background:var(--mustard)}
+.ruler a span{font-weight:400;opacity:.7}
+.ruler a:hover,.ruler a:focus-visible{background:var(--ink);color:var(--paper);outline:none}
+
+header{display:flex;justify-content:space-between;align-items:baseline;padding:22px 5vw 0;font-size:14px;gap:1rem;flex-wrap:wrap}
+.logo{font:800 22px/1 Fraunces;letter-spacing:.02em}
+.logo b{color:var(--tomato)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:4vw;padding:8vh 5vw 10vh;align-items:end}
+.hero h1{font-size:clamp(44px,7.4vw,112px);line-height:.92}
+.hero h1 em{font-style:normal;color:var(--tomato)}
+.hero p{max-width:30ch;margin-top:28px;font-size:19px}
+.tower{width:100%;max-width:300px;justify-self:center}
+.tower .b{transform-box:fill-box;transform-origin:center bottom}
+@media (prefers-reduced-motion:no-preference){
+  .tower .b{animation:drop .7s cubic-bezier(.3,1.6,.5,1) both}
+  .tower .b:nth-child(2){animation-delay:.25s}.tower .b:nth-child(3){animation-delay:.5s}.tower .b:nth-child(4){animation-delay:.75s}
+}
+@keyframes drop{from{transform:translateY(-240px);opacity:0}60%{opacity:1}to{transform:none}}
+
+.cta{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:34px;align-items:center}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;padding:15px 22px;border-radius:999px 999px 999px 4px}
+.btn.alt{background:transparent;color:var(--ink);padding:0;border-radius:0;border-bottom:3px solid var(--tomato)}
+
+section{padding:9vh 5vw;border-top:2px solid var(--ink);position:relative}
+.mark{position:absolute;left:-12px;top:-13px;background:var(--ink);color:var(--paper);font:700 11px/1 Rubik;letter-spacing:.1em;padding:6px 8px 6px 14px}
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:5vw}
+h2{font-size:clamp(34px,4.6vw,64px);line-height:1}
+.two p{max-width:46ch;margin-bottom:1em}
+.who{background:var(--ink);color:var(--paper)}
+.who .mark{background:var(--tomato)}
+.who h2{color:var(--mustard)}
+.list{list-style:none;margin-top:1.4em}
+.list li{padding:12px 0;border-bottom:1px dashed currentColor;display:flex;gap:14px}
+.list li::before{content:"";flex:none;width:14px;height:14px;margin-top:6px;background:var(--tomato);border-radius:50%}
+.who .list li::before{background:var(--mustard);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)}
+
+.score{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.score .big{font-size:clamp(90px,16vw,220px);line-height:.8;color:var(--tomato)}
+.score p{max-width:22ch;font-size:20px}
+
+.book ol{counter-reset:s;list-style:none;margin-top:1.2em}
+.book ol li{counter-increment:s;padding:14px 0 14px 54px;position:relative;border-bottom:1px solid var(--ink);max-width:52ch}
+.book ol li::before{content:counter(s);position:absolute;left:0;top:10px;width:36px;height:36px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:800 18px/1 Fraunces}
+
+footer{padding:5vh 5vw 8vh;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-size:14px;border-top:2px solid var(--ink)}
+footer address{font-style:normal;font-size:17px}
+.fine{opacity:.75;max-width:40ch}
+
+@media (max-width:760px){
+  :root{--ruler:0px}
+  body{padding-top:40px}
+  .ruler{right:0;bottom:auto;width:auto;height:40px;border-right:0;border-bottom:2px solid var(--ink);
+    background-image:repeating-linear-gradient(to right,var(--ink) 0 2px,transparent 2px 12px),repeating-linear-gradient(to right,var(--ink) 0 2px,transparent 2px 60px);
+    background-size:100% 8px,100% 16px;background-repeat:repeat-x;background-position:left bottom,left bottom}
+  .ruler ol{flex-direction:row;padding:0 8px;align-items:flex-start;justify-content:space-between}
+  .ruler a{writing-mode:horizontal-tb;transform:none;padding:7px 4px;font-size:10px;letter-spacing:.06em}
+  .hero,.two{grid-template-columns:1fr}
+  .tower{max-width:130px;justify-self:end;margin-top:-8px}
+  .mark{left:5vw}
+}
+</style>
+</head>
+<body>
+<nav class="ruler" aria-label="Secțiuni">
+  <ol>
+    <li><a href="#copii">Copii <span>50 cm</span></a></li>
+    <li><a href="#gravide">Gravide <span>100</span></a></li>
+    <li><a href="#programare">Programare <span>150</span></a></li>
+    <li><a href="#unde">Unde <span>170</span></a></li>
+  </ol>
+</nav>
+
+<header>
+  <div class="logo">KINE<b>START</b></div>
+  <div>Recuperare copii &amp; gravide · Constanța</div>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <h1>Pentru copiii care <em>cresc</em>. Pentru mamele care <em>așteaptă</em>.</h1>
+    <p>Kinetoterapie în Constanța, pe Bulevardul 1 Mai. Pași mici, făcuți corect, de la primul consult.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/40771779093">Scrie pe WhatsApp</a>
+      <a class="btn alt" href="tel:+40771779093">0771 779 093</a>
+    </div>
+  </div>
+  <svg class="tower" viewBox="0 0 200 260" role="img" aria-label="Turn de cuburi de jucărie">
+    <rect class="b" x="20" y="200" width="160" height="56" fill="#1F2A44"/>
+    <rect class="b" x="45" y="140" width="110" height="60" fill="#D2461F"/>
+    <path class="b" d="M60 140 A40 40 0 0 1 140 140 Z" fill="#F2B035" stroke="#1F2A44" stroke-width="3"/>
+    <circle class="b" cx="100" cy="72" r="26" fill="#1F2A44"/>
+  </svg>
+</div>
+
+<section id="copii">
+  <span class="mark">50 CM — COPII</span>
+  <div class="two">
+    <h2>Fiecare copil are ritmul lui.</h2>
+    <div>
+      <p>Ne uităm la cum stă, cum se ridică, cum merge și cum aleargă copilul tău. Apoi lucrăm de acolo, prin joc și exerciții pe măsura vârstei.</p>
+      <p>Tu stai alături, vezi ce facem și pleci acasă știind ce poți repeta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gravide" class="who">
+  <span class="mark">100 CM — GRAVIDE</span>
+  <div class="two">
+    <h2>Sarcina schimbă felul în care te miști.</h2>
+    <div>
+      <p>Spatele, bazinul, respirația — corpul se reorganizează lună de lună. Mișcarea potrivită te ajută să rămâi în contact cu el.</p>
+      <ul class="list">
+        <li>În timpul sarcinii</li>
+        <li>Cu exerciții pe care le poți face și acasă</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="score">
+    <span class="big">5,0</span>
+    <p>din 159 de recenzii pe Google Maps.</p>
+  </div>
+</section>
+
+<section id="programare" class="book">
+  <span class="mark">150 CM — PROGRAMARE</span>
+  <div class="two">
+    <h2>Trei rânduri pe WhatsApp sunt de ajuns.</h2>
+    <div>
+      <ol>
+        <li>Vârsta copilului sau săptămâna de sarcină.</li>
+        <li>Ce ai observat sau ce te îngrijorează, pe scurt.</li>
+        <li>Zilele în care poți veni.</li>
+      </ol>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/40771779093">Deschide WhatsApp</a>
+        <a class="btn alt" href="tel:+40771779093">sau sună: 0771 779 093</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="unde">
+  <address>
+    <strong>KINESTART</strong><br>
+    Bulevardul 1 Mai 29<br>900178 Constanța<br>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=KINESTART%20Recuperare%20copii%2Fgravide%20Constan%C8%9Ba%2C%20Bulevardul%201%20Mai%2029%2C%20900178%20Constan%C8%9Ba">Deschide în Google Maps →</a>
+  </address>
+  <p class="fine">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</p>
+</footer>
+</body>
+</html>

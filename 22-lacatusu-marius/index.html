@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lacatusu Marius · Constructor de locuințe · Brașov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ply:#D8B98A;--conc:#C4C1BA;--orange:#E85A0C;--k:#161616;--w:#F4F2EE}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--conc);color:var(--k);font:400 16px/1.6 "JetBrains Mono",monospace;overflow-x:hidden}
+a{color:inherit}
+.d{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:uppercase}
+
+/* concrete speckle */
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .2 0 0 0 0 .2 0 0 0 .28 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:10px 4vw;background:var(--k);color:var(--w);font-size:13px}
+.bar .d{font-size:22px;font-weight:800;letter-spacing:.04em}
+/* spirit level */
+.level{width:150px;height:22px;border:2px solid var(--orange);border-radius:12px;position:relative;background:#B9D46A;overflow:hidden;flex:none}
+.level::before,.level::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--k);left:calc(50% - 16px)}
+.level::after{left:calc(50% + 14px)}
+.bubble{position:absolute;top:3px;left:calc(50% - 12px);width:24px;height:12px;border-radius:7px;background:rgba(255,255,255,.85);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+
+.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:4vw;padding:7vh 4vw 9vh;align-items:start}
+h1{font-weight:900;font-size:clamp(64px,11vw,176px);line-height:.84;letter-spacing:-.01em}
+h1 span{color:var(--orange);display:block}
+.hero .lede{max-width:36ch;margin-top:28px;font-size:17px}
+
+/* the site board (panou de identificare) */
+.board{background:var(--ply);border:3px solid var(--k);position:relative;transform:rotate(-1deg);box-shadow:8px 8px 0 var(--k);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .25' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .28 0 0 0 0 .1 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+.board::before,.board::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#6d6d6d;border:2px solid var(--k);top:10px;left:10px}
+.board::after{left:auto;right:10px}
+.board h2{background:var(--k);color:var(--ply);font-weight:800;font-size:20px;letter-spacing:.08em;padding:10px 16px 8px 34px}
+.board dl{display:grid;grid-template-columns:auto 1fr}
+.board dt,.board dd{padding:10px 14px;border-top:2px solid var(--k)}
+.board dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-right:2px solid var(--k);background:rgba(255,255,255,.18)}
+.board dd{font:800 22px/1.1 "Big Shoulders Display";text-transform:uppercase}
+.board dd a{text-decoration:none;border-bottom:3px solid var(--orange)}
+
+.tape{height:28px;background:repeating-linear-gradient(-45deg,var(--orange) 0 22px,var(--k) 22px 44px);border-top:2px solid var(--k);border-bottom:2px solid var(--k)}
+
+.steps{background:var(--w);padding:9vh 4vw;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:4vw}
+.steps h2{font-weight:900;font-size:clamp(42px,5.4vw,84px);line-height:.88}
+.steps ol{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:90px 1fr;padding:22px 0;border-top:2px solid var(--k)}
+.steps li::before{content:"0" counter(s);font:900 54px/.8 "Big Shoulders Display";color:var(--orange)}
+.steps li b{display:block;font:800 30px/1 "Big Shoulders Display";text-transform:uppercase;margin-bottom:8px}
+.steps li p{max-width:48ch}
+.pencil{font-size:13px;color:#6a6355;margin-top:28px;border-left:3px solid var(--ply);padding-left:12px;max-width:40ch}
+
+.end{padding:10vh 4vw 6vh;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3vw;align-items:end}
+.end .tel{font:900 clamp(56px,10vw,150px)/.85 "Big Shoulders Display";text-decoration:none;display:block}
+.end .tel:hover,.end .tel:focus-visible{color:var(--orange);outline:none}
+.end p{margin-top:16px}
+.stamp{font:800 18px/1.1 "Big Shoulders Display";text-transform:uppercase;border:3px solid var(--k);padding:12px 14px;text-align:center;transform:rotate(4deg);background:var(--w)}
+.stamp b{display:block;font-size:56px;line-height:.9;color:var(--orange)}
+footer{padding:0 4vw 6vh;font-size:12px}
+
+@media (max-width:820px){
+  .bar{padding:10px 16px}
+  .level{width:96px}
+  .hero,.steps,.end{grid-template-columns:1fr;padding-left:16px;padding-right:16px}
+  .board{transform:none;box-shadow:5px 5px 0 var(--k);margin-right:5px}
+  .steps li{grid-template-columns:62px 1fr}
+  .steps li::before{font-size:40px}
+  .stamp{justify-self:start}
+  footer{padding:0 16px 40px}
+}
+@media (max-width:480px){.bar>a{display:none}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <span class="d">Lacatusu Marius</span>
+  <span class="level" aria-hidden="true"><span class="bubble"></span></span>
+  <a href="tel:+40771642479">0771 642 479</a>
+</div>
+
+<main>
+  <div class="hero">
+    <div>
+      <h1 class="d">Case<br>ridicate <span>la nivel.</span></h1>
+      <p class="lede">Constructor de locuințe în Brașov. Dacă ai un teren și o idee de casă, primul pas e o discuție față în față.</p>
+    </div>
+    <aside class="board" aria-label="Panou de identificare">
+      <h2 class="d">Panou de identificare</h2>
+      <dl>
+        <dt>Constructor</dt><dd>Lacatusu Marius</dd>
+        <dt>Obiectiv</dt><dd>Casa ta</dd>
+        <dt>Localitate</dt><dd>Brașov</dd>
+        <dt>Telefon</dt><dd><a href="tel:+40771642479">0771 642 479</a></dd>
+        <dt>Google</dt><dd>5,0 · 88 recenzii</dd>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="tape" aria-hidden="true"></div>
+
+  <section class="steps">
+    <h2 class="d">Cum se începe o casă</h2>
+    <div>
+      <ol>
+        <li><div><b>Suni.</b><p>Spui pe scurt ce vrei să construiești și unde. Fără planuri perfecte — o schiță pe hârtie e de ajuns.</p></div></li>
+        <li><div><b>Ne vedem pe teren.</b><p>O casă se discută cel mai bine acolo unde va sta.</p></div></li>
+        <li><div><b>Vorbim concret.</b><p>Ce se poate face, în ce ordine și ce înseamnă fiecare etapă pentru tine.</p></div></li>
+      </ol>
+      <p class="pencil">Notă de creion: dacă ai deja autorizația sau un proiect, adu-le la prima întâlnire.</p>
+    </div>
+  </section>
+
+  <div class="tape" aria-hidden="true"></div>
+
+  <section class="end">
+    <div>
+      <a class="tel d" href="tel:+40771642479">0771<br>642 479</a>
+      <p><a href="https://wa.me/40771642479">Scrie pe WhatsApp →</a> · Strada Nicolae Labiș, 500171 Brașov · <a href="https://www.google.com/maps/search/?api=1&amp;query=Lacatusu%20Marius%2C%20Strada%20Nicolae%20Labi%C8%99%2C%20500171%20Bra%C8%99ov">hartă</a></p>
+    </div>
+    <div class="stamp" aria-label="Nota 5,0 pe Google din 88 de recenzii"><b>5,0</b>88 recenzii<br>Google Maps</div>
+  </section>
+</main>
+<footer>Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</footer>
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var b=document.querySelector('.bubble'),last=scrollY,t;
+  addEventListener('scroll',function(){
+    var dv=Math.max(-40,Math.min(40,(scrollY-last)*1.2));last=scrollY;
+    b.style.transform='translateX('+dv+'px)';clearTimeout(t);t=setTimeout(function(){b.style.transform='none'},120);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

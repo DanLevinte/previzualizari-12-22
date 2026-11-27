@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Clinica Dentară Dr. MORRA · dr. Razvan Mortu · Brașov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--w:#F6F5F1;--k:#111;--o:#D63F17;--g:rgba(17,17,17,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--w);color:var(--k);font:400 17px/1.5 Archivo,"Helvetica Neue",Arial,sans-serif;font-variation-settings:"wdth" 92;overflow-x:hidden}
+a{color:inherit}
+.mono{font:500 12px/1.4 "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase}
+/* visible 12-col grid */
+.grid{position:fixed;inset:0;pointer-events:none;z-index:0;margin:0 3vw;
+  background:repeating-linear-gradient(90deg,var(--g) 0 1px,transparent 1px calc((100% - 1px)/12));}
+.grid::after{content:"";position:absolute;right:0;top:0;bottom:0;border-right:1px solid var(--g)}
+.in{position:relative;z-index:1;margin:0 3vw;display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+
+.top{padding:18px 0;border-bottom:2px solid var(--k);align-items:baseline}
+.top .a{grid-column:1/5}.top .b{grid-column:5/9}.top .c{grid-column:9/13;text-align:right}
+
+.mark{grid-column:1/13;font-weight:900;font-size:min(27vw,380px);line-height:.78;letter-spacing:-.035em;padding:3vh 0 0;margin-left:-.04em;
+  font-variation-settings:"wdth" 125;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.mark{animation:open 1.6s cubic-bezier(.6,0,.2,1) .2s both}}
+@keyframes open{from{font-variation-settings:"wdth" 62}to{font-variation-settings:"wdth" 125}}
+.mark .dot{color:var(--o)}
+.under{padding:18px 0 9vh;border-bottom:2px solid var(--k);align-items:start}
+.under .say{grid-column:1/7;font-weight:800;font-size:clamp(24px,3vw,40px);line-height:1.05;font-variation-settings:"wdth" 75}
+.under .meta{grid-column:9/13}
+.under .meta p{margin-bottom:8px}
+
+.row{padding:6vh 0;border-bottom:1px solid var(--k);align-items:start}
+.code{grid-column:1/3;color:var(--o)}
+.row h2{grid-column:3/8;font-weight:800;font-size:clamp(30px,4vw,58px);line-height:.95;letter-spacing:-.02em;font-variation-settings:"wdth" 70}
+.row .txt{grid-column:9/13}
+.row .txt p{margin-bottom:.8em}
+
+.num{font-weight:900;font-size:clamp(80px,12vw,170px);line-height:.8;font-variation-settings:"wdth" 62;letter-spacing:-.04em}
+
+.leaflet{grid-column:3/13;border:2px solid var(--k);background:var(--w);margin-top:4px}
+.leaflet div{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);border-top:1px solid var(--k)}
+.leaflet div:first-child{border-top:0;background:var(--k);color:var(--w)}
+.leaflet span{padding:12px 14px}
+.leaflet span:first-child{border-right:1px solid var(--k)}
+.leaflet div:first-child span:first-child{border-color:var(--w)}
+
+.call{grid-column:3/13;display:flex;flex-wrap:wrap;gap:0;margin-top:20px}
+.call a{flex:1 1 260px;display:block;padding:22px 20px;text-decoration:none;border:2px solid var(--k);margin:-1px;font-weight:800;font-size:clamp(22px,2.6vw,34px);font-variation-settings:"wdth" 80}
+.call a:first-child{background:var(--o);color:var(--w);border-color:var(--o)}
+.call a:hover,.call a:focus-visible{background:var(--k);color:var(--w);border-color:var(--k)}
+.call small{display:block;margin-bottom:8px}
+
+footer{padding:24px 0 40px;align-items:start}
+footer .a{grid-column:1/7}footer .b{grid-column:9/13;color:#555}
+
+@media (max-width:820px){
+  .in>*{grid-column:1/13 !important}
+  .top .c{text-align:left}
+  .under .meta,.row .txt{margin-top:22px}
+  .row h2{margin-top:10px}
+  .leaflet div{grid-template-columns:1fr}
+  .leaflet span:first-child{border-right:0;padding-bottom:0;font-weight:700}
+  .leaflet div:first-child span:first-child{padding-bottom:12px}
+  footer .b{margin-top:16px}
+}
+</style>
+</head>
+<body>
+<div class="grid" aria-hidden="true"></div>
+
+<header class="in top mono">
+  <span class="a">Clinică de stomatologie</span>
+  <span class="b">Str. Sitei 19 · Brașov</span>
+  <a class="c" href="tel:+40727777734">0727 777 734</a>
+</header>
+
+<main>
+  <h1 class="in"><span class="mark" aria-label="Dr. MORRA">MORRA<span class="dot">.</span></span></h1>
+  <div class="in under">
+    <p class="say">Deschide larg.<br>Restul e treaba noastră.</p>
+    <div class="meta mono">
+      <p>Clinica Dentară Dr. MORRA</p>
+      <p>by dr. Razvan Mortu</p>
+      <p>500074 Brașov, România</p>
+    </div>
+  </div>
+
+  <section class="in row">
+    <span class="code mono">M—01</span>
+    <h2>O clinică cu un nume pe ușă.</h2>
+    <div class="txt">
+      <p>Dr. MORRA înseamnă dr. Razvan Mortu. Când suni, știi la cine ajungi.</p>
+      <p>Clinica e pe Strada Sitei 19, în Brașov.</p>
+    </div>
+  </section>
+
+  <section class="in row">
+    <span class="code mono">M—02</span>
+    <div style="grid-column:3/8"><span class="num">5,0</span></div>
+    <div class="txt">
+      <p class="mono">Google Maps · 64 recenzii</p>
+      <p>Nota medie lăsată public de pacienți. Recenziile pot fi citite integral pe profilul clinicii.</p>
+    </div>
+  </section>
+
+  <section class="in row">
+    <span class="code mono">M—03</span>
+    <h2 style="grid-column:3/13;margin-bottom:22px">Prospect</h2>
+    <div class="leaflet mono">
+      <div><span>Secțiune</span><span>Conținut</span></div>
+      <div><span>Indicații</span><span>Durere, control periodic, o a doua opinie.</span></div>
+      <div><span>Mod de administrare</span><span>Programare la telefon sau pe WhatsApp.</span></div>
+      <div><span>Unde se eliberează</span><span>Strada Sitei 19, 500074 Brașov.</span></div>
+      <div><span>Reacții adverse</span><span>Tendința de a zâmbi în poze.</span></div>
+    </div>
+  </section>
+
+  <section class="in row" id="programare">
+    <span class="code mono">M—04</span>
+    <h2>Programare</h2>
+    <div class="call">
+      <a href="tel:+40727777734"><small class="mono">Telefon</small>0727 777 734</a>
+      <a href="https://wa.me/40727777734"><small class="mono">WhatsApp</small>Scrie un mesaj →</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Clinica%20Dentar%C4%83%20Dr.%20MORRA%2C%20Strada%20Sitei%2019%2C%20500074%20Bra%C8%99ov"><small class="mono">Hartă</small>Str. Sitei 19 →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="in mono">
+  <span class="a">Dr. MORRA · Brașov</span>
+  <span class="b">Previzualizare de site, neoficială. Datele de contact provin din profilul public Google Maps (noiembrie 2026).</span>
+</footer>
+</body>
+</html>
