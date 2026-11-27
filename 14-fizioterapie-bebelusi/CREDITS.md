@@ -1,5 +1,5 @@
 Fotografii Unsplash (licența Unsplash, utilizare gratuită), găzduite local:
-- img/hero.jpg  https://images.unsplash.com/photo-1537673156864-5d2c72de7824
-- img/saltea.jpg  https://images.unsplash.com/photo-1620354599715-a42fe76d85cb
-- img/zambet.jpg  https://images.unsplash.com/photo-1588495644868-1416d25d8b33
-- img/burtica.jpg  https://images.unsplash.com/photo-1756758169354-08d04a1d832c
+- img/hero.jpg  https://images.unsplash.com/photo-1774578342155-8d7e44a18bfd
+- img/saltea.jpg  https://images.unsplash.com/photo-1542901689-8917f44e3541
+- img/zambet.jpg  https://images.unsplash.com/photo-1768693602418-260d828b878d
+- img/burtica.jpg  https://images.unsplash.com/photo-1559454403-b8fb88521f11

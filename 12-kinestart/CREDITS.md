@@ -1,6 +1,6 @@
 Fotografii Unsplash (licența Unsplash, utilizare gratuită), găzduite local:
-- img/hero.jpg  https://images.unsplash.com/photo-1685362158423-abf004b858d2
-- img/copii.jpg  https://images.unsplash.com/photo-1708687045030-26702e62fc65
-- img/joaca.jpg  https://images.unsplash.com/photo-1709127347884-a106974ef58d
+- img/hero.jpg  https://images.unsplash.com/photo-1649751361457-01d3a696c7e6
+- img/copii.jpg  https://images.unsplash.com/photo-1774464593838-85b320eb7453
+- img/joaca.jpg  https://images.unsplash.com/photo-1771270786606-f5a0e57db762
 - img/gravide.jpg  https://images.unsplash.com/photo-1618069174551-90141d7d4e7f
-- img/masa.jpg  https://images.unsplash.com/photo-1708686816818-2b018e0c1296
+- img/masa.jpg  https://images.unsplash.com/photo-1651663303138-4dc283e15992
